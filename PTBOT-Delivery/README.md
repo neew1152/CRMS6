@@ -21,12 +21,6 @@ Boards Manager > *PTBOT* > INSTALL
 Windows Search > *Device Manager* > Open
 
 
-![Device-Manager.png](Docs/Ref-Img/Device-Manager.png)
-
-Windows Search > *Device Manager* > Open
-
-
-
 **Connect the PTBOT's USB Port**
 ![Update-driver.png](Docs/Ref-Img/Update-driver.png)
 
