@@ -1,3 +1,5 @@
 ด.ช.นพกร บุญทรง ม.2.2 เลขที่ 3
 
-std017011@tesaban6.ac.th
+Email: std017011@tesaban6.ac.th
+
+LINE: neew1152
