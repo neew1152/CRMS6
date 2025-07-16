@@ -39,18 +39,11 @@ Search for driver in this location > *PTBOT\Docs\CP210x_Universal_Windows_Driver
 
 
 # Setup Arduino Environment
-![Preferences.png](Docs/Ref-Img/Preferences.png)
-
-File > Preferences
-
-
-![Additional-Boards-Manager-URLs.png](Docs/Ref-Img/Additional-Boards-Manager-URLs.png)
-
-Additional Boards Manager URLs > *https://github.com/pt-robotics/esp32/raw/main/package_ptbot_index.json* > OK
-
-
 ![Boards-Manager.png](Docs/Ref-Img/Boards-Manager.png)
 
 Boards Manager > *PTBOT* > INSTALL
+
+
 ![Select-other-board-and-port.png](Docs/Ref-Img/Select-other-board-and-port.png)
+
 Select other board and port...
