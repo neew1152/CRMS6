@@ -10,6 +10,7 @@ Additional Boards Manager URLs > *https://github.com/pt-robotics/esp32/raw/main/
 
 
 ![Boards-Manager.png](Docs/Ref-Img/Boards-Manager.png)
+
 Boards Manager > *PTBOT* > INSTALL
 
 
