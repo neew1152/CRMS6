@@ -18,10 +18,8 @@ Boards Manager > *PTBOT* > INSTALL
 # Setup Windows Environment
 ![Device-Manager.png](Docs/Ref-Img/Device-Manager.png)
 
-Windows Search > *Device Manager* > Open
+Windows Search > *Device Manager* > Open > Connect the PTBOT's USB Port
 
-
-## Connect the PTBOT's USB Port
 ![Update-driver.png](Docs/Ref-Img/Update-driver.png)
 
 Ports (COM & LPT) > *Context Menu* > Update driver
