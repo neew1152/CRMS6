@@ -47,3 +47,8 @@ Boards Manager > *PTBOT* > INSTALL
 ![Select-other-board-and-port.png](Docs/Ref-Img/Select-other-board-and-port.png)
 
 Select other board and port...
+
+
+![Select-Other-Board-and-Port.png](Docs/Ref-Img/Select-Other-Board-and-Port.png)
+
+PORTS > OK
