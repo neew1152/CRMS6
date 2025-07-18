@@ -1,5 +1,5 @@
 # What's new: DLA_NUC-POP32-MEDIUM-4-MOTOR-MPU6050.7z
-- New Start Display
+- New Start Display Menu
 - Create kernel files
 - minimal TracJC.ino
 - Remove Finish.ino
