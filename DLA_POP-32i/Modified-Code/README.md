@@ -1,0 +1,9 @@
+- New Start Display
+- Create kernel files
+- minimal TracJC.ino
+- Remove Finish.ino
+- Remove Mode.ino
+- Remove Knob
+- Remove SetSpeed();
+- Remove Balance();
+- Remove June();
