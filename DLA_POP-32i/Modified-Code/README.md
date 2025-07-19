@@ -1,5 +1,5 @@
 # ✅ What's new: Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
-- New Display Menu
+- New display menu
 - Create kernel files
 - Create Operation.ino
 - Minimal TracJC.ino
