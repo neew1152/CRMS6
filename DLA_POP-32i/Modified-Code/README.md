@@ -1,4 +1,4 @@
-# What's new: ✅ Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - New Start Display Menu
 - Create kernel files
 - minimal TracJC.ino
@@ -13,7 +13,7 @@ Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z based on Fix-IMU-Newc
 
 ---
 
-# What's new: 🟪 Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# 🟪 What's new: Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - Add the explanation about "Gobal var = Local var"
 - Remove gobal var "int ACCSpeed, SonarSpeed"
 - etc. (I can't remember 🙏).
