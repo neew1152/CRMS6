@@ -1,7 +1,7 @@
 # ✅ What's new: Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - New Start Display Menu
 - Create kernel files
-- minimal TracJC.ino
+- Minimal TracJC.ino
 - Remove Finish.ino
 - Remove Mode.ino
 - Remove Knob
