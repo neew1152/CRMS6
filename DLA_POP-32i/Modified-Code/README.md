@@ -8,7 +8,7 @@
 - Modified Main-Motor-Movement.ino && Motor-Movement-kernel.ino
 - etc.
 
-Stable_0PM.7.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z based on Stable_11PM.07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && PT_BOT_NUC_PI-07.19.2025.7z
+Based on Stable_11PM.07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && PT_BOT_NUC_PI-07.19.2025.7z
 
 ---
 
@@ -18,7 +18,7 @@ Stable_0PM.7.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z based on Stable_11
 - Remove gobal var "int ACCSpeed, SonarSpeed"
 - etc. (I can't remember 🙏).
 
-Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050 based on Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+Based on Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 
 ---
 
@@ -34,4 +34,4 @@ Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050 based on Stable_07.18.2
 - Remove Balance();
 - Remove June();
 
-Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z based on Fix-IMU-Newclear-Pop32-Medium-4wheel.7z
+Based on Fix-IMU-Newclear-Pop32-Medium-4wheel.7z
