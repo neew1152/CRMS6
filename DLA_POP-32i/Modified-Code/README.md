@@ -1,4 +1,4 @@
-# ✅ What's new: Stable_0PM.7.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_0AM.7.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - New display menu
 - Remove Switch.ino
 - Move display memu to loop();
@@ -7,8 +7,8 @@
 - Create Move_Left(); && Move_Right();
 - Modified Main-Motor-Movement.ino && Motor-Movement-kernel.ino
 - etc.
-
-Based on Stable_11PM.07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && PT_BOT_NUC_PI-07.19.2025.7z
+| Based on |
+| Stable_11PM.07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z | Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z && PT_BOT_NUC_PI-07.19.2025.7z |
 
 ---
 
