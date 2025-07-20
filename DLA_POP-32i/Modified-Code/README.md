@@ -20,7 +20,9 @@
 - Remove gobal var "int ACCSpeed, SonarSpeed"
 - etc. (I can't remember 🙏).
 
-Based on Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+| Based on |
+|----------|
+| Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
 
 ---
 
@@ -36,4 +38,6 @@ Based on Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - Remove Balance();
 - Remove June();
 
-Based on Fix-IMU-Newclear-Pop32-Medium-4wheel.7z
+| Based on |
+|----------|
+| Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
