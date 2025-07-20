@@ -3,7 +3,6 @@
 - Remove Switch.ino
 - Move display memu to loop();
 - set SW_A for Show7Analog();
-- zeroYaw(); && getIMU(); from ChatGPT
 - Create Move_Left(); && Move_Right();
 - Modified Main-Motor-Movement.ino && Motor-Movement-kernel.ino
 - etc.
