@@ -1,7 +1,5 @@
 # MPU6050 Drift
 
----
-
 ### 🧭 Why Code Alone Isn't Enough
 
 The MPU6050 provides only:
