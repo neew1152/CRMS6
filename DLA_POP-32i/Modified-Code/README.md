@@ -1,7 +1,7 @@
-# ✅ What's new: Stable_0AM.7.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_0AM.07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - New display menu
 - Remove Switch.ino
-- Move display memu to loop();
+- Move display menu to loop();
 - set SW_A for Show7Analog();
 - Create Move_Left(); && Move_Right();
 - Modified Main-Motor-Movement.ino && Motor-Movement-kernel.ino
@@ -16,9 +16,9 @@
 ---
 
 # 🟪 What's new: Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
-- Add the explanation about "Gobal var = Local var"
+- Add the explanation about "Global var = Local var"
 - Create Experiment.ino
-- Remove gobal var "int ACCSpeed, SonarSpeed"
+- Remove global var "int ACCSpeed, SonarSpeed"
 - etc. (I can't remember 🙏).
 
 | Based on |
@@ -42,3 +42,4 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
