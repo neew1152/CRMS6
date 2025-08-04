@@ -19,7 +19,7 @@ Search for driver in this location > *PTBOT\Docs\CP210x_Universal_Windows_Driver
 
 
 
-# Setup Arduino Environment
+# Setup Arduino IDE Environment
 ![Preferences.png](Docs/Ref-Img/Preferences.png)
 
 File > Preferences
