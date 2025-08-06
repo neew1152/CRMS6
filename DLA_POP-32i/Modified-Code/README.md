@@ -20,7 +20,8 @@
 - set SW_A for Show7Analog();
 - Create Move_Left();
 - Create Move_Right();
-- Modified Main-Motor-Movement.ino && Motor-Movement-Kernel.ino
+- Modified Main-Motor-Movement.ino
+- Modified Motor-Movement-Kernel.ino
 - etc.
 
 | Based on |
@@ -70,6 +71,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
