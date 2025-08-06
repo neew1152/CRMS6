@@ -1,4 +1,16 @@
-# ✅ What's new: Stable_0AM.07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+- Someone requested me to bring back the old TracDegreeSpeedTime(); && TracDegreeSpeedTimeBack();
+- Remove Forward(); && Backward();
+- Create BackwardSpeed();
+
+| Based on |
+|----------|
+| Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
+| Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
+
+---
+
+# ✅ What's new: Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - New display menu
 - Remove Switch.ino
 - Move display menu to loop();
@@ -9,9 +21,18 @@
 
 | Based on |
 |----------|
-| Stable_11PM.07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
-| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z     |
-| PT_BOT_NUC_PI-07.19.2025.7z                                     |
+| Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
+| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
+| PT_BOT_NUC_PI-07.19.2025.7z                                 |
+
+---
+
+# ✅ What's new: Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+- add MotorStop();
+
+| Based on |
+|----------|
+| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
 
 ---
 
@@ -42,4 +63,5 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
