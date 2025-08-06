@@ -1,7 +1,9 @@
 # ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
-- Someone requested me to bring back the old TracDegreeSpeedTime(); && TracDegreeSpeedTimeBack();
+- Someone requested me to bring back the Old-Motor-Movement.ino
 - Remove Forward(); && Backward();
 - Create BackwardSpeed();
+- Optimized Main-Motor-Movement.ino
+- Rewrite Servo.ino
 
 | Based on |
 |----------|
@@ -16,7 +18,7 @@
 - Move display menu to loop();
 - set SW_A for Show7Analog();
 - Create Move_Left(); && Move_Right();
-- Modified Main-Motor-Movement.ino && Motor-Movement-kernel.ino
+- Modified Main-Motor-Movement.ino && Motor-Movement-Kernel.ino
 - etc.
 
 | Based on |
@@ -64,6 +66,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
