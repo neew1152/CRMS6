@@ -29,6 +29,7 @@
 
 # ✅ What's new: Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - add MotorStop();
+- etc.
 
 | Based on |
 |----------|
@@ -63,5 +64,6 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
