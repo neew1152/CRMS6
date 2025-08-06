@@ -44,8 +44,6 @@
 
 # 🟪 What's new: Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - Add the explanation about "Global var = Local var"
-- Create Main-Motor-Movement.ino
-- Create Motor-Movement-Kernel.ino
 - Create Experiment.ino
 - Remove global var "int ACCSpeed, SonarSpeed"
 - etc. (I can't remember 🙏).
@@ -58,7 +56,9 @@
 
 # ✅ What's new: Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - New display menu
-- Create kernel files
+- Create Main-Motor-Movement.ino
+- Create Motor-Movement-Kernel.ino
+- Create System-Kernel.ino
 - Create Operation.ino
 - Minimal TracJC.ino
 - Remove Finish.ino
@@ -71,6 +71,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
