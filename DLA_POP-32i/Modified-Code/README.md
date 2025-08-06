@@ -1,6 +1,7 @@
 # ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - Someone requested me to bring back the Old-Motor-Movement.ino
-- Remove Forward(); && Backward();
+- Remove Forward();
+- Remove Backward();
 - Create BackwardSpeed();
 - Optimized Main-Motor-Movement.ino
 - Rewrite Servo.ino
@@ -17,7 +18,8 @@
 - Remove Switch.ino
 - Move display menu to loop();
 - set SW_A for Show7Analog();
-- Create Move_Left(); && Move_Right();
+- Create Move_Left();
+- Create Move_Right();
 - Modified Main-Motor-Movement.ino && Motor-Movement-Kernel.ino
 - etc.
 
@@ -68,6 +70,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
