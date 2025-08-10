@@ -1,4 +1,4 @@
-# ✅ What's new: Release-DLA_NUC-POP-32i-PT.7z
+# 🟪 What's new: Release-DLA_NUC-POP-32i-PT.7z
 - Rewrite Everything
 
 | Based on |
@@ -81,6 +81,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
