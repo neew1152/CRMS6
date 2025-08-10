@@ -1,6 +1,6 @@
 # 🟪 What's new: Release-DLA_NUC-POP-32i-PT.7z
 - Rewrite Everything
-
+- ✅ ChatGPT 100%
 | Based on |
 |----------|
 | Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
@@ -81,6 +81,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
