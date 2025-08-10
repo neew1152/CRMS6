@@ -1,3 +1,13 @@
+# ✅ What's new: Release-DLA_NUC_POP-32i_PT.7z
+- Rewrite Everything
+
+| Based on |
+|----------|
+| Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
+| PT_BOT_NUC_PI-07.19.2025.7z                                 |
+
+---
+
 # ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
 - Someone requested me to bring back the Old-Motor-Movement.ino
 - Remove Forward();
@@ -71,6 +81,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+
 
 
 
