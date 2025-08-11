@@ -35,7 +35,7 @@ Additional Boards Manager URLs > *https://github.com/pt-robotics/esp32/raw/main/
 Boards Manager > *PTBOT* > INSTALL
 
 
-![Select-other-board-and-port.png](Docs/Ref-Img/Select-other-board-and-port.png)
+![Select-other-board-and-port.png](Docs/Ref-Img/Select-other-board-and-port....png)
 
 Select other board and port...
 
