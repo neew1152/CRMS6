@@ -17,6 +17,7 @@ This repository contains a set of scripts designed to:
 
 ```
 main/
+├── README.md
 ├── served_payloads.bat          # Main menu system
 ├── honeypot/
 │   ├── payload.ps1              # PowerShell script to weaken security
