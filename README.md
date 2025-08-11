@@ -6,4 +6,4 @@ LINE: neew1152
 
 ---
 
-https://download-directory.github.io/
+download-directory.github.io
