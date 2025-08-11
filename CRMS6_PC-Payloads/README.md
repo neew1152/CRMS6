@@ -98,7 +98,7 @@ main/
 
 ## Disclaimer
 
-This toolkit is provided for educational and legitimate security testing purposes only. 
+This toolkit is provided for educational and research purposes only. The authors are not responsible for any misuse of these tools. Use at your own risk in appropriate environments.
 
 - The creator is not responsible for any misuse of these scripts
 - Use only on systems you own or have explicit permission to test
@@ -112,7 +112,3 @@ By using this toolkit, you agree to use it responsibly and only in appropriate, 
 Maintained by neew1152  
 Inspired by security research methodologies  
 References Mr. Robot themes for educational purposes
-
-## Legal Disclaimer
-
-This software is provided for educational and research purposes only. The authors are not responsible for any misuse of these tools. Use at your own risk in appropriate environments.
