@@ -2,8 +2,6 @@
 title served_software.bat
 color 07
 
-
-
 echo.
 echo ===============================
 echo      Office C2R Installers
@@ -78,4 +76,5 @@ if exist "%payloadps1%" (
     echo Payload PowerShell not found: %payloadps1%
 
 )
+
 
