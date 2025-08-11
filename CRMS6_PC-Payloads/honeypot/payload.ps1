@@ -19,6 +19,3 @@ Auditpol /set /category:"Object Access" /success:enable /failure:enable
 
 # Enable Guest account to make the system more accessible
 net user Guest /active:yes
-
-# Log all network connections for monitoring
-Set-NetFirewallProfile -Profile Domain,Public,Private -LogBlocked True -LogAllowed True -LogMaxSizeKilobytes 32767
