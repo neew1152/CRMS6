@@ -18,14 +18,14 @@ This repository contains a set of scripts designed to:
 ```
 main/
 ├── README.md
-├── served_payloads.bat          # Main menu system
+├── served_payloads.bat          # Main menu interface
 ├── honeypot/
-│   ├── payload.ps1              # PowerShell script to weaken security
+│   ├── payload.ps1              # PowerShell script for security weakening
 │   ├── payload.reg              # Registry modifications for vulnerabilities
-│   └── served_honeypot.bat      # Honeypot deployment script
+│   └── served_honeypot.bat      # Execution script for honeypot setup
 └── software/
-    ├── payload.ps1              # Software installation script
-    └── served_software.bat      # Office suite installer
+    ├── payload.ps1              # PowerShell script for software installation
+    └── served_software.bat      # Execution script for software deployment
 ```
 
 ## Usage Instructions
