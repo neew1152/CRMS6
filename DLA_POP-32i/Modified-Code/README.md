@@ -1,15 +1,15 @@
-# 🟪 What's new: Release-DLA_NUC-POP-32i-PT.7z
+# 🟪 What's new: Release-DLA_NUC-POP-32i-PT
 - Rewrite Everything
 - ✅ ChatGPT 100%
 
 | Based on |
 |----------|
-| Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
-| PT_BOT_NUC_PI-07.19.2025.7z                                 |
+| Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050 |
+| PT_BOT_NUC_PI-07.19.2025                                |
 
 ---
 
-# ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - Someone requested me to bring back the Old-Motor-Movement.ino
 - Remove Forward();
 - Remove Backward();
@@ -19,12 +19,12 @@
 
 | Based on |
 |----------|
-| Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
-| Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
+| Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050  |
+| Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050  |
 
 ---
 
-# ✅ What's new: Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - New display menu
 - Remove Switch.ino
 - Move display menu to loop();
@@ -37,23 +37,23 @@
 
 | Based on |
 |----------|
-| Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z  |
-| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
-| PT_BOT_NUC_PI-07.19.2025.7z                                 |
+| Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050  |
+| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050 |
+| PT_BOT_NUC_PI-07.19.2025                                 |
 
 ---
 
-# ✅ What's new: Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - add MotorStop();
 - etc.
 
 | Based on |
 |----------|
-| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
+| Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050 |
 
 ---
 
-# 🟪 What's new: Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# 🟪 What's new: Nightly_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - Add the explanation about "Global var = Local var"
 - Create Experiment.ino
 - Remove global var "int ACCSpeed, SonarSpeed"
@@ -61,11 +61,11 @@
 
 | Based on |
 |----------|
-| Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z |
+| Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050 |
 
 ---
 
-# ✅ What's new: Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050.7z
+# ✅ What's new: Stable_07.18.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - New display menu
 - Create Main-Motor-Movement.ino
 - Create Motor-Movement-Kernel.ino
@@ -81,7 +81,7 @@
 
 | Based on |
 |----------|
-| Fix-IMU-Newclear-Pop32-Medium-4wheel.7z |
+| Fix-IMU-Newclear-Pop32-Medium-4wheel |
 
 
 
