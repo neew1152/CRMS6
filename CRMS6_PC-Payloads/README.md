@@ -39,6 +39,7 @@ main
 └───software
         payload.ps1
         served_software.bat
+        c_robot.exe
 ```
 
 ---
