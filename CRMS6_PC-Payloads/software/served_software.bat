@@ -2,8 +2,7 @@
 title served_software.bat
 color 07
 
-:: Get the folder where this batch file is located
-set "basepath=%~dp0"
+
 
 echo.
 echo ===============================
@@ -21,6 +20,9 @@ if "%choice%"=="2" goto ProPlus2024Retail.img
 if "%choice%"=="3" goto ProPlus2021Retail.img
 if "%choice%"=="4" goto ProPlus2019Retail.img
 if "%choice%"=="0" goto N
+
+:: Get the folder where this batch file is located
+set "basepath=%~dp0"
 
 :O365ProPlusRetail.img
 echo.
@@ -76,3 +78,4 @@ if exist "%payloadps1%" (
     echo Payload PowerShell not found: %payloadps1%
 
 )
+
