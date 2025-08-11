@@ -1,7 +1,5 @@
 # CRMS6 PC Payloads
 This repository contains a collection of batch and PowerShell scripts designed to automate the setup and configuration of a Windows environment.
-
-It is divided into two main components: a **Honeypot Payload** for creating a deliberately vulnerable system for security research, and a **Software Payload** for rapid application deployment.
 ### [Clean Installation Windows 11 PC](https://github.com/neew1152/Clean-Installation-Windows-11-Personal-User)
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/b40b7d75-d14f-42f7-ba0b-32aa507894d9" />
 
@@ -9,20 +7,20 @@ It is divided into two main components: a **Honeypot Payload** for creating a de
 
 ## 🚨 WARNING: READ BEFORE USE 🚨
 
-> ### Honeypot Payload
-> The `honeypot` scripts are designed to **intentionally and severely weaken** a system's security defenses. They will:
-> *   Disable Windows Defender (Antivirus)
-> *   Disable Windows Firewall
-> *   Disable User Account Control (UAC)
-> *   Disable Windows Update
-> *   Weaken password policies
-> *   Enable insecure services like SMBv1 and Remote Desktop
-> *   Disable CPU-level security mitigations (Spectre/Meltdown)
->
-> **DO NOT RUN THESE SCRIPTS ON A PERSONAL, WORK, OR PRODUCTION COMPUTER.** Use them only on a completely isolated, disposable Virtual Machine (VM) intended for security research, malware analysis, or educational purposes. Running these scripts on a machine connected to a network could expose it and other devices to immediate compromise.
+ ### Honeypot Payload
+ The `honeypot` scripts are designed to **intentionally and severely weaken** a system's security defenses. They will:
+ *   Disable Windows Defender (Antivirus)
+ *   Disable Windows Firewall
+ *   Disable User Account Control (UAC)
+ *   Disable Windows Update
+ *   Weaken password policies
+ *   Enable insecure services like SMBv1 and Remote Desktop
+ *   Disable CPU-level security mitigations (Spectre/Meltdown)
 
-> ### Software Payload
-> The `software` scripts automate the installation of legitimate software. However, they also include a command to run an **unofficial Microsoft Activation Script (`irm https://get.activated.win | iex`)**. Using such tools may violate Microsoft's license agreements and pose a potential security risk, as you are executing code from an untrusted third-party source. Use this feature at your discretion and understand the legal and security implications.
+ **DO NOT RUN THESE SCRIPTS ON A PERSONAL, WORK, OR PRODUCTION COMPUTER.** Use them only on a completely isolated, disposable Virtual Machine (VM) intended for security research, malware analysis, or educational purposes. Running these scripts on a machine connected to a network could expose it and other devices to immediate compromise.
+
+ ### Software Payload
+ The `software` scripts automate the installation of legitimate software. However, they also include a command to run an **unofficial Microsoft Activation Script (`irm https://get.activated.win | iex`)**. Using such tools may violate Microsoft's license agreements and pose a potential security risk, as you are executing code from an untrusted third-party source. Use this feature at your discretion and understand the legal and security implications.
 
 ---
 
