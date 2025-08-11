@@ -62,7 +62,7 @@ This payload's goal is to make a Windows machine as insecure as possible to attr
 
 *   **`served_honeypot.bat`**: The orchestrator for this payload. It displays a dramatic warning banner and requires confirmation before proceeding to apply the dangerous changes.
 *   **`payload.reg`**: A registry file that systematically disables core security features like Windows Defender, SmartScreen, Firewall, UAC, Windows Update, and various security notifications. It also enables insecure protocols like SMBv1.
-*   **`payload.ps1`**: A PowerShell script that complements the `.reg` file. It disables Spectre/Meltdown mitigations, enables Remote Desktop, weakens account password policies, activates the Guest account, and enables extensive security and network logging to monitor attacker activity.
+*   **`payload.ps1`**: A PowerShell script that complements the `.reg` file. It disables Spectre/Meltdown mitigations, enables Remote Desktop, weakens account password policies, activates the Guest account, and enables extensive security.
 
 ### 3. Software Payload (`/software`)
 
