@@ -1,4 +1,6 @@
 # CRMS6 PC Payloads System
+A collection of Windows payload scripts designed for system configuration, security testing, and software deployment.
+
 This project provides two main functionality paths: honeypot configuration for security research and software installation with activation tools.
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/b40b7d75-d14f-42f7-ba0b-32aa507894d9" />
