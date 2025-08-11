@@ -10,4 +10,4 @@ LINE: neew1152
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c21b8f2-1640-472d-80c7-548b387bd1dd" />
 
-Extract to "Apache-Subversion\" > Move to "C:\Program Files\" > **Super Key + R** > `sysdm.cpl` > OK > Advanced > Environment Variables… > System variables > Path > Edit > New > "C:\Program Files\Apache-Subversion\" > OK > OK > OK
+> Extract to "Apache-Subversion\" > Move to "C:\Program Files\" > **Super Key + R** > `sysdm.cpl` > OK > Advanced > Environment Variables… > System variables > Path > Edit > New > "C:\Program Files\Apache-Subversion\" > OK > OK > OK
