@@ -1,0 +1,4 @@
+void Can1Normal()
+{
+  
+}
