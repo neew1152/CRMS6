@@ -1,23 +1,50 @@
 # CRMS6 PC Payloads System
+This project provides two main functionality paths: honeypot configuration for security research and software installation with activation tools.
 
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/b40b7d75-d14f-42f7-ba0b-32aa507894d9" />
 ### [Clean Installation Windows 11 PC](https://github.com/neew1152/Clean-Installation-Windows-11-Personal-User)
 
 ---
 
-## Overview
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Directory Structure](#directory-structure)
+- [Usage](#usage)
+- [Security Considerations](#security-considerations)
+- [Disclaimer](#disclaimer)
 
-This repository contains a set of scripts designed to:
-1. Simulate a vulnerable honeypot system to attract and study attacker behavior
-2. Install common software packages for system setup
+## Project Overview
 
-**Warning**: The honeypot payloads will significantly weaken your system's security. Only use in controlled, isolated environments.
+CRMS6 PC Payloads is a toolkit for Windows system administrators and security researchers. It offers two primary functions:
+
+1. **Honeypot Configuration**: Creates deliberately vulnerable systems for security testing and monitoring attacker behavior
+2. **Software Deployment**: Installs common applications along with activation tools
+
+**Note**: This toolkit contains scripts that modify system security settings. Use only in controlled environments for legitimate testing purposes.
+
+## Features
+
+### Honeypot Features
+- Disables security features (Windows Defender, Firewall, SmartScreen)
+- Weakens password policies to attract brute-force attempts
+- Enables remote desktop access
+- Disables Windows Update to mimic outdated systems
+- Enables detailed security event logging to monitor attacker activity
+- Configures system to appear as an unpatched, vulnerable target
+
+### Software Deployment Features
+- Installs Winget package manager
+- Deploys common applications (7zip, Chrome, Arduino)
+- Includes Microsoft Activation Scripts (MAS) for Windows activation
+- Provides Office installation options (Microsoft 365, 2024, 2021, 2019)
+- Installs LINE messenger
+- Enables .NET Framework 3.5
 
 ## Directory Structure
 
 ```
 main/
-├── README.md
 ├── served_payloads.bat          # Main menu interface
 ├── honeypot/
 │   ├── payload.ps1              # PowerShell script for security weakening
@@ -28,51 +55,58 @@ main/
     └── served_software.bat      # Execution script for software deployment
 ```
 
-## Usage Instructions
+## Usage
 
-### Main Menu (served_payloads.bat)
-Run this script to access the main menu:
-1. Run honeypot payloads
-2. Run software payloads
-3. Run all payloads
-0. Exit
+1. Run `served_payloads.bat` as administrator
+2. Choose from the menu options:
+   - **Option 1**: Configure a honeypot system (deliberately vulnerable)
+   - **Option 2**: Install software packages
+   - **Option 3**: Run both the honeypot configuration and the software installation
+   - **Option 0**: Exit
 
-The script will automatically request administrator privileges when needed.
+### Honeypot Configuration
+- When selecting the honeypot option, you'll see a security warning banner
+- Confirm you understand the risks by selecting option 1
+- The system will automatically:
+  * Import registry modifications (`payload.reg`)
+  * Execute PowerShell security weakening commands (`payload.ps1`)
 
-### Honeypot Payloads
-**Danger**: These scripts will:
-- Disable Windows Defender and firewall
-- Enable vulnerable protocols (SMBv1, RDP)
-- Weaken password policies
-- Disable security mitigations
-- Enable extensive logging
+### Software Deployment
+- When selecting the software option, you'll be prompted to choose:
+  * Microsoft 365
+  * Office 2024
+  * Office 2021
+  * Office 2019
+  * Bypass Office installation
+- After Office selection, the script will:
+  * Download and extract the selected Office version
+  * Install LINE messenger
+  * Run the software installation PowerShell script
 
-Usage:
-1. Run `served_honeypot.bat`
-2. Confirm the warning message
-3. The script will apply registry changes and PowerShell modifications
+## Security Considerations
 
-### Software Payloads
-These scripts will install:
-- 7-Zip
-- Arduino IDE
-- Google Chrome
-- Microsoft Office suites (2019-2024 options)
-- LINE desktop client
-- .NET Framework 3.5
+⚠️ **IMPORTANT**: This toolkit contains scripts that deliberately weaken system security. 
 
-Usage:
-1. Run `served_software.bat`
-2. Select your preferred Office version
-3. The script will download and install components
+- **Never** run these scripts on production systems or personal computers
+- Only use in isolated, controlled environments dedicated to security testing
+- The honeypot configuration disables critical security features, including:
+  * Windows Defender
+  * Windows Firewall
+  * SmartScreen protection
+  * Security updates
+  * UAC (User Account Control)
+- Systems configured with the honeypot payloads will be extremely vulnerable to attacks
 
-## Security Warning
+## Disclaimer
 
-The honeypot scripts:
-- Should ONLY be used in controlled virtual environments
-- Will make your system extremely vulnerable to attacks
-- Are designed for security research purposes only
-- May violate organizational security policies if used improperly
+This toolkit is provided for educational and legitimate security testing purposes only. 
+
+- The creator is not responsible for any misuse of these scripts
+- Use only on systems you own or have explicit permission to test
+- Microsoft Activation Scripts (MAS) are included for demonstration purposes only
+- Bypassing software licensing agreements may violate terms of service and local laws
+
+By using this toolkit, you agree to use it responsibly and only in appropriate, legal contexts.
 
 ## Credits
 
