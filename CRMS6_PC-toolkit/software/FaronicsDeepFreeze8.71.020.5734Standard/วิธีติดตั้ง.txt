@@ -1,0 +1,20 @@
+[1] รันไฟล์ DFStd.exe เพื่อติดตั้งโปรแกรม
+    --> ถึงหน้า " License key " ไม่ต้องกรอกอะไร ให้ติ๊กถูก " Use Evaluation "
+    --> เมื่อกด Install สักพักมันจะรีสตาร์ทเครื่องอัตโนมัติ
+
+[2] เมื่อเปิดขึ้นมามันจะถามว่าต้องการเซ็ตรหัสผ่านไหม ให้กด No (ค่อยมาเซ็ตทีหลัง)
+    --> กด Ctrl + Shift + Alt + F5 -> กด OK
+    --> ติ๊ก Boot Thawed (เพื่อ Unfreeze) แล้วกด Apply and Reboot
+
+[3] คลิกขวาที่ไฟล์ " StopServices.CMD " เลือก Run as administrator -> แล้ว Restart เครื่อง
+
+[4] คลิกขวาที่ไฟล์ " patch.exe " เลือก Run as administrator -> กด " Patch "
+
+[5] คลิกขวาที่ไฟล์ " StartServices.CMD " เลือก Run as administrator -> แล้ว Restart เครื่อง
+
+[6] กด Ctrl + Shift + Alt + F5 เข้าโปรแกรมไปตั้งรหัสผ่าน และติ๊ก Boot Frozen (เพื่อ freeze)
+
+
+=============================
+	MAWTOLOAD.COM
+=============================
