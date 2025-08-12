@@ -71,6 +71,7 @@ The honeypot module deliberately weakens system security. Only use in:
 - Controlled research environments
 - Security training labs
 - Authorized penetration testing scenarios
+
 **Never deploy on production systems or internet-exposed machines**
 
 ## Disclaimer
