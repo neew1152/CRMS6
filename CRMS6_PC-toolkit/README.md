@@ -6,6 +6,7 @@ This toolkit contains a collection of batch and PowerShell scripts designed to a
 
 ## Overview
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/dc9cfcbe-db80-44fb-8e17-07844d985450" />
+
 The CRMS6 PC Toolkit is a comprehensive system management tool designed for two primary purposes:
 1. **Honeypot Configuration** - Deliberately weakens system security to attract attackers for monitoring
 2. **Software Deployment** - Installs essential software packages with automated workflows
