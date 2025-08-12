@@ -1,15 +1,15 @@
 @echo off
 title served_payloads.bat
 
+:: Get the folder where this batch file is located
+set "basepath=%~dp0"
+
 :: Get administrator permission
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit /b
 )
-
-:: Get the folder where this batch file is located
-set "basepath=%~dp0"
 
 :: Paths relative to this batch file
 set "honeypot_payloads=%basepath%honeypot\served_honeypot.bat"
@@ -73,5 +73,6 @@ if exist "%software_payloads%" (
 
 pause
 goto menu
+
 
 
