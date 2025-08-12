@@ -15,8 +15,6 @@ function Ask-And-Run($Prompt, $Command, $AsciiArt) {
         Write-Host "Running: $Command" -ForegroundColor Green
         Invoke-Expression $Command
         Write-Host "[OK]"
-    } else {
-        Write-Host "[OK]"
     }
 }
 
@@ -179,5 +177,5 @@ Ask-And-Run "Install .NET Framework 4" 'winget install -e --id Microsoft.DotNet.
 Ask-And-Run "Install .NET Framework 3.5" 'Enable-WindowsOptionalFeature -Online -FeatureName "NetFx3" -All -NoRestart' $asciiNetFx
 
 # Microsoft Activation Scripts
-
+Write-Host "irm https://get.activated.win | iex"
 irm https://get.activated.win | iex

@@ -46,8 +46,9 @@ goto OfficeMenu
 
 :O365ProPlusRetail.img
 echo.
-echo Downloading O365ProPlusRetail.img
+echo Downloading O365ProPlusRetail.img...
 curl --ssl-no-revoke -LO "https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/O365ProPlusRetail.img"
+echo Extracting O365ProPlusRetail.img...
 tar -xf "O365ProPlusRetail.img" -C "./"
 start "" "%basepath%Setup.exe"
 echo [ OK ]
@@ -55,8 +56,9 @@ goto PromptLINE
 
 :ProPlus2024Retail.img
 echo.
-echo Downloading ProPlus2024Retail.img
+echo Downloading ProPlus2024Retail.img...
 curl --ssl-no-revoke -LO "https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/ProPlus2024Retail.img"
+echo Extracting ProPlus2024Retail.img...
 tar -xf "ProPlus2024Retail.img" -C "./"
 start "" "%basepath%Setup.exe"
 echo [ OK ]
@@ -64,8 +66,9 @@ goto PromptLINE
 
 :ProPlus2021Retail.img
 echo.
-echo Downloading ProPlus2021Retail.img
+echo Downloading ProPlus2021Retail.img...
 curl --ssl-no-revoke -LO "https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/ProPlus2021Retail.img"
+echo Extracting ProPlus2021Retail.img...
 tar -xf "ProPlus2021Retail.img" -C "./"
 start "" "%basepath%Setup.exe"
 echo [ OK ]
@@ -73,8 +76,9 @@ goto PromptLINE
 
 :ProPlus2019Retail.img
 echo.
-echo Downloading ProPlus2019Retail.img
+echo Downloading ProPlus2019Retail.img...
 curl --ssl-no-revoke -LO "https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/ProPlus2019Retail.img"
+echo Extracting ProPlus2019Retail.img...
 tar -xf "ProPlus2019Retail.img" -C "./"
 start "" "%basepath%Setup.exe"
 echo [ OK ]
@@ -158,13 +162,15 @@ echo +#####+--.-.-.......            .+
 echo  #.+##...                .---+    
 echo    #.   ......---                   
 echo.                                                                                                                                                
-set /p choice="Copy c_robot.exe to Public Desktop? (Y/N): "
+set /p choice="Install c_robot.exe? (Y/N): "
 if /i "%choice%"=="Y" goto Copyc_robot.exe
 if /i "%choice%"=="N" goto PromptDeepFreeze
 goto Promptc_robot.exe
 
 :Copyc_robot.exe
 echo.
+echo Extracting c_robot.tar...
+tar -xf "c_robot.tar" -C "./"
 echo Copying c_robot.exe...
 copy "%basepath%\c_robot.exe" "C:\Users\Public\Desktop"
 echo [ OK ]
@@ -197,6 +203,8 @@ goto PromptDeepFreeze
 
 :InstallDeepFreeze
 echo.
+echo Extracting FaronicsDeepFreeze8.71.020.5734Standard.tar...
+tar -xf "FaronicsDeepFreeze8.71.020.5734Standard.tar" -C "./"
 echo Starting DFStd.exe...
 start "" "%basepath%FaronicsDeepFreeze8.71.020.5734Standard\DFStd.exe"
 echo [ OK ]
