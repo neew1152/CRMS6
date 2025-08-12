@@ -5,6 +5,13 @@ color 07
 :: Get the folder where this batch file is located
 set "basepath=%~dp0"
 
+:: Get administrator permission
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
+)
+
 echo.
 echo ===============================
 echo      Office C2R Installers
@@ -76,6 +83,7 @@ if exist "%payloadps1%" (
     echo Payload PowerShell not found: %payloadps1%
 
 )
+
 
 
 
