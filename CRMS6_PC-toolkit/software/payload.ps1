@@ -6,10 +6,17 @@ winget-install.ps1
 # Function to prompt and run a command with ASCII art
 function Ask-And-Run($Prompt, $Command, $AsciiArt) {
     Write-Host $AsciiArt -ForegroundColor White
-    $response = Read-Host "$Prompt (Y/N)"
+    
+    do {
+        $response = Read-Host "$Prompt (Y/N)"
+    } while ($response -notmatch '^[YyNn]$')
+
     if ($response -match '^[Yy]$') {
         Write-Host "Running: $Command" -ForegroundColor Green
         Invoke-Expression $Command
+        Write-Host "[OK]"
+    } else {
+        Write-Host "[OK]"
     }
 }
 
@@ -172,4 +179,5 @@ Ask-And-Run "Install .NET Framework 4" 'winget install -e --id Microsoft.DotNet.
 Ask-And-Run "Install .NET Framework 3.5" 'Enable-WindowsOptionalFeature -Online -FeatureName "NetFx3" -All -NoRestart' $asciiNetFx
 
 # Microsoft Activation Scripts
+
 irm https://get.activated.win | iex
