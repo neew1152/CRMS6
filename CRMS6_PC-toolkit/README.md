@@ -16,19 +16,19 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 ## Directory Structure
 ```
 Main 
-│   README.md                - This documentation file
-│   served_payloads.bat      - Main menu interface
+│   README.md                   - This documentation file
+│   served_payloads.bat         - Main menu interface
 │
-├───honeypot                 - Security weakening tools
-│       payload.ps1          - PowerShell security disabler
-│       payload.reg          - Registry tweaks (not shown)
-│       served_honeypot.bat  - Honeypot deployment script
+├───honeypot                    - Security weakening tools
+│       payload.ps1             - PowerShell security disabler
+│       payload.reg             - Registry tweaks (not shown)
+│       served_honeypot.bat     - Honeypot deployment script
 │
-└───software                 - Software installation tools
-        c_robot.tar          - Robotics software
+└───software                    - Software installation tools
+        c_robot.tar             - Robotics software
         FaronicsDeepFreeze*.tar - System protection software
-        payload.ps1          - Software installer script
-        served_software.bat  - Software deployment script
+        payload.ps1             - Software installer script
+        served_software.bat     - Software deployment script
 ```
 
 ## Key Features
