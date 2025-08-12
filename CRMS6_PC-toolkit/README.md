@@ -1,97 +1,83 @@
 # CRMS6 PC Toolkit
 This toolkit contains a collection of batch and PowerShell scripts designed to automate the setup and configuration of a Windows environment.
 ### [Clean Installation Windows 11 PC](https://github.com/neew1152/Clean-Installation-Windows-11-Personal-User)
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/b40b7d75-d14f-42f7-ba0b-32aa507894d9" />
 
 ---
 
-## 🚨 WARNING: READ BEFORE USE 🚨
+## Overview
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/dc9cfcbe-db80-44fb-8e17-07844d985450" />
 
- ### Honeypot Payload
- The `honeypot` scripts are designed to **intentionally and severely weaken** a system's security defenses. They will:
- *   Disable Windows Defender (Antivirus)
- *   Disable Windows Firewall
- *   Disable User Account Control (UAC)
- *   Disable Windows Update
- *   Weaken password policies
- *   Enable insecure services like SMBv1 and Remote Desktop
- *   Disable CPU-level security mitigations (Spectre/Meltdown)
+The CRMS6 PC Toolkit is a comprehensive system management tool designed for two primary purposes:
+1. **Honeypot Configuration** - Deliberately weakens system security to attract attackers for monitoring
+2. **Software Deployment** - Installs essential software packages with automated workflows
 
- **DO NOT RUN THESE SCRIPTS ON A PERSONAL, WORK, OR PRODUCTION COMPUTER.** Use them only on a completely isolated, disposable Virtual Machine (VM) intended for security research, malware analysis, or educational purposes. Running these scripts on a machine connected to a network could expose it and other devices to immediate compromise.
+**Author**: neew1152
+**Warning**: The honeypot component disables critical security features - use only in controlled environments
 
- ### Software Payload
- The `software` scripts automate the installation of legitimate software. However, they also include a command to run an **unofficial Microsoft Activation Script (`irm https://get.activated.win | iex`)**. Using such tools may violate Microsoft's license agreements and pose a potential security risk, as you are executing code from an untrusted third-party source. Use this feature at your discretion and understand the legal and security implications.
-
----
-
-## Project Structure
-
+## Directory Structure
 ```
-main
-│   README.md
-│   served_payloads.bat
+Main 
+│   README.md                - This documentation file
+│   served_payloads.bat      - Main menu interface
 │
-├───honeypot
-│       payload.ps1
-│       payload.reg
-│       served_honeypot.bat
+├───honeypot                 - Security weakening tools
+│       payload.ps1          - PowerShell security disabler
+│       payload.reg          - Registry tweaks (not shown)
+│       served_honeypot.bat  - Honeypot deployment script
 │
-└───software
-        payload.ps1
-        served_software.bat
-        c_robot.exe
+└───software                 - Software installation tools
+        c_robot.tar          - Robotics software
+        FaronicsDeepFreeze*.tar - System protection software
+        payload.ps1          - Software installer script
+        served_software.bat  - Software deployment script
 ```
 
----
+## Key Features
 
-## Components Explained
+### Honeypot Module (`/honeypot`)
+- Disables critical security protections:
+  - Windows Defender & Firewall
+  - SmartScreen and UAC
+  - Spectre/Meltdown mitigations
+  - Password complexity requirements
+- Enables vulnerable services:
+  - Remote Desktop (RDP)
+  - SMBv1 protocol
+  - Guest account
+- Configures weak cryptography settings
+- Enables detailed attack logging
 
-### 1. Main Script (`served_payloads.bat`)
+### Software Module (`/software`)
+- Installs essential development tools:
+  - Arduino IDE, VS Code, microBlock IDE
+- Deploys popular browsers:
+  - Chrome, Firefox, Tor Browser
+- Installs utilities:
+  - 7-Zip, .NET Framework
+- Microsoft Office deployment:
+  - Supports 2019, 2021, 2024, and 365
+- Specialized tools:
+  - LINE messenger
+  - c_robot robotics software
+  - Faronics Deep Freeze system protection
 
-This is the central entry point for the entire collection. It provides a simple command-line menu to choose which payload(s) to execute.
+## Usage Instructions
 
-*   **[1] Run honeypot_payloads**: Executes the scripts in the `honeypot` directory.
-*   **[2] Run software_payloads**: Executes the scripts in the `software` directory.
-*   **[3] Run all payloads**: Executes both the honeypot and software payloads sequentially.
-*   **[0] Exit**: Closes the script.
+1. **Run the main menu**:
+   ```batch
+   served_payloads.bat
+   ```
 
-The script automatically requests Administrator privileges, which are required for most of its operations.
+2. **Administrator Privileges**:
+   - The toolkit will automatically request admin rights if needed
 
-### 2. Honeypot Payload (`/honeypot`)
+## Security Warning
+⚠️ The honeypot module deliberately weakens system security. Only use in:
+- Controlled research environments
+- Security training labs
+- Authorized penetration testing scenarios
 
-This payload's goal is to make a Windows machine as insecure as possible to attract and study potential attacks.
-
-*   **`served_honeypot.bat`**: The orchestrator for this payload. It displays a dramatic warning banner and requires confirmation before proceeding to apply the dangerous changes.
-*   **`payload.reg`**: A registry file that systematically disables core security features like Windows Defender, SmartScreen, Firewall, UAC, Windows Update, and various security notifications. It also enables insecure protocols like SMBv1.
-*   **`payload.ps1`**: A PowerShell script that complements the `.reg` file. It disables Spectre/Meltdown mitigations, enables Remote Desktop, weakens account password policies, activates the Guest account, and enables extensive security.
-
-### 3. Software Payload (`/software`)
-
-This payload is designed for rapidly provisioning a machine with common software and utilities.
-
-*   **`served_software.bat`**: A menu-driven script that first offers to download and install various retail versions of **Microsoft Office (2019, 2021, 2024, 365)** directly from Microsoft's CDN. It also downloads and initiates the installer for the **LINE messenger** client. Afterwards, it runs the accompanying `payload.ps1` script.
-*   **`payload.ps1`**: A PowerShell script that performs the following actions:
-    *   Installs **winget-cli** (The Windows Package Manager).
-    *   Uses winget to install **7-Zip**, **Arduino IDE**, and **Google Chrome**.
-    *   **Activates Windows and Office** using the online Microsoft Activation Scripts (MAS).
-    *   Installs **.NET Framework 3.5**.
-
----
-
-## How to Use
-
-1.  Ensure you are running these scripts in a safe, isolated environment (preferably a VM that you can reset).
-2.  Clone or download the repository to your target Windows machine.
-3.  Navigate to the `main` directory.
-4.  Right-click `served_payloads.bat` and select "Run as administrator," or simply double-click it and approve the UAC prompt for elevation.
-5.  Follow the on-screen menu instructions to select and run the desired payload(s).
-6.  The scripts require an active internet connection to download software installers.
-
-## Prerequisites
-
-*   Windows Operating System
-*   Administrator privileges
-*   An internet connection (for the software payload)
+**Never deploy on production systems or internet-exposed machines**
 
 ## Disclaimer
 
