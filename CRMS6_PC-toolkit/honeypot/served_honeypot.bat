@@ -17,7 +17,7 @@ echo ==========================================================
 echo          !!!   S E C U R I T Y    B R E A C H   !!!
 echo ==========================================================
 echo.
-echo          YOU are about to dismantle all defenses.
+echo          YOU are about to dismantle ALL defenses.
 echo      YOU are about to install Exploit + Vulnerability.
 echo        YOU are about to kill ALL Security Protocols.
 echo.
@@ -134,4 +134,5 @@ echo     / /_/ ___/ __ \/ ___/ / _ \/ __/ / / /
 echo    / __(__  ) /_/ / /__/ /  __/ /_/ /_/ /
 echo   /_/ /____/\____/\___/_/\___/\__/\__, /
 echo                                  /____/
+
 pause
