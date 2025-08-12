@@ -11,7 +11,6 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 1. **Honeypot Configuration** - Deliberately weakens system security to attract attackers for monitoring
 2. **Software Deployment** - Installs essential software packages with automated workflows
 
-**Author**: neew1152
 **Warning**: The honeypot component disables critical security features - use only in controlled environments
 
 ## Directory Structure
