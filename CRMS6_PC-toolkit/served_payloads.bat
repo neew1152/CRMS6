@@ -19,7 +19,7 @@ set "software_payloads=%basepath%software\served_software.bat"
 color 07
 echo.
 echo ===============================
-echo       CRMS6 PC Toolkit
+echo        CRMS6 PC Toolkit
 echo            neew1152
 echo ===============================
 echo.
@@ -81,6 +81,7 @@ if exist "%software_payloads%" (
 
 pause
 goto menu
+
 
 
 
