@@ -71,7 +71,7 @@ Main
    - The toolkit will automatically request admin rights if needed
 
 ## Security Warning
-⚠️ The honeypot module deliberately weakens system security. Only use in:
+The honeypot module deliberately weakens system security. Only use in:
 - Controlled research environments
 - Security training labs
 - Authorized penetration testing scenarios
