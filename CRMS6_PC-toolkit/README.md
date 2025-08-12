@@ -6,11 +6,9 @@ This toolkit contains a collection of batch and PowerShell scripts designed to a
 
 ## Overview
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/dc9cfcbe-db80-44fb-8e17-07844d985450" />
-
 The CRMS6 PC Toolkit is a comprehensive system management tool designed for two primary purposes:
 1. **Honeypot Configuration** - Deliberately weakens system security to attract attackers for monitoring
 2. **Software Deployment** - Installs essential software packages with automated workflows
-
 **Warning**: The honeypot component disables critical security features - use only in controlled environments
 
 ## Directory Structure
@@ -32,7 +30,6 @@ Main
 ```
 
 ## Key Features
-
 ### Honeypot Module (`/honeypot`)
 - Disables critical security protections:
   - Windows Defender & Firewall
@@ -61,12 +58,10 @@ Main
   - Faronics Deep Freeze system protection
 
 ## Usage Instructions
-
 1. **Run the main menu**:
    ```batch
    served_payloads.bat
    ```
-
 2. **Administrator Privileges**:
    - The toolkit will automatically request admin rights if needed
 
@@ -75,14 +70,11 @@ The honeypot module deliberately weakens system security. Only use in:
 - Controlled research environments
 - Security training labs
 - Authorized penetration testing scenarios
-
 **Never deploy on production systems or internet-exposed machines**
 
 ## Disclaimer
-
 This project is provided for educational and research purposes only. The author is not responsible for any damage, data loss, or security compromises that may result from using these scripts. By running any of these scripts, you acknowledge the risks involved and agree that you are fully responsible for your actions.
 
 ## Credits
-
 Maintained by neew1152  
 Inspired by Mr. Robot themes
