@@ -2,6 +2,9 @@
 title served_honeypot.bat
 color 04
 
+:: Get the folder where this batch file is located
+set "basepath=%~dp0"
+
 ::   ===================== WARNING BANNER =====================
 echo.
 echo ==========================================================
@@ -33,9 +36,6 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-:: Get the folder where this batch file is located
-set "basepath=%~dp0"
-
 :: Paths relative to this batch file
 set "payloadreg=%basepath%payload.reg"
 set "payloadps1=%basepath%payload.ps1"
@@ -55,3 +55,4 @@ if exist "%payloadps1%" (
 ) else (
     echo Payload PowerShell not found: %payloadps1%
 )
+
