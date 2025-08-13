@@ -15,7 +15,6 @@ if %errorLevel% neq 0 (
 cd %basepath%
 
 :OfficeMenu
-echo.
 echo =================================================================================
 echo       ##########                                                           
 echo   #################                                                        
@@ -273,4 +272,5 @@ if exist "%payloadps1%" (
 ) else (
     echo Payload PowerShell script not found!
 )
+
 
