@@ -158,15 +158,77 @@ echo    #.   ......---
 echo.                                                                                                                                                
 set /p choice="Install c_robot.exe? (Y/N): "
 if /i "%choice%"=="Y" goto Copyc_robot.exe
-if /i "%choice%"=="N" goto PromptDeepFreeze
+if /i "%choice%"=="N" goto PromptMicrosoftPhotos
 goto Promptc_robot.exe
 
 :Copyc_robot.exe
 echo.
 echo [ OK ] Extracting c_robot.tar...
 tar -xf "c_robot.tar" -C "./"
-echo [ OK ] Copying c_robot.exe...
 copy "%basepath%\c_robot.exe" "C:\Users\Public\Desktop"
+goto PromptMicrosoftPhotos
+
+:PromptMicrosoftPhotos
+echo.                                                                                                                       
+echo     ++**********************             
+echo  *++++++++++*********************         
+echo *++*******************+==+********        
+echo *********************-...:=*******        
+echo *********************-...:=*******        
+echo ***********************==*********        
+echo **********************************        
+echo **************+---=+**************        
+echo ************+----====+************        
+echo **********+----========+**********        
+echo ********+----========++++*********        
+echo ******+=----=======+****+++*****++        
+echo *****-----=======+##*****++++***++        
+echo ***=----=======+##********+++++***        
+echo *=----=======+*#***********++++=+*        
+echo ----=======+*#*************+++++++        
+echo --=======+*##************+++++++++        
+echo  ======++*#***********+++++++++++         
+echo     ==+*#**************+++++++  
+echo.                                                                                                                                                
+set /p choice="Install MicrosoftPhotos? (Y/N): "
+if /i "%choice%"=="Y" goto InstallMicrosoftPhotos
+if /i "%choice%"=="N" goto PromptWindowsCamera
+goto PromptMicrosoftPhotos
+
+:InstallMicrosoftPhotos
+echo.
+echo [ OK ]
+start "" "%basepath%MicrosoftPhotosInstaller.exe"
+goto PromptWindowsCamera
+
+:PromptWindowsCamera
+echo.                                                                                                                       
+echo             +=======++++                   
+echo  ========  ++++++++++++++                  
+echo ==========++++++++++++++++++++++++++       
+echo ===++++++++++++=-::-=++++++++++++++++      
+echo =+++++++++++-..........-*+++++=--=++*      
+echo ++++++++++=..:=+======:..=*+++++++++*      
+echo +++++++++-..============..-*++++++++*      
+echo +++++++++:.-============-.:+*+++*****      
+echo +++++++++:.==============.:+*********      
+echo +++++++++:.-============-.:**********      
+echo ++++++++*+:.:==========:.:+**********      
+echo ++++++++***:..-======-..:************      
+echo +++++++++****-:......:-**************      
+echo +++++++++****************************      
+echo *****************###*****************      
+echo ####################################              
+echo.                                                                                                                                                
+set /p choice="Install WindowsCamera? (Y/N): "
+if /i "%choice%"=="Y" goto InstallWindowsCamera
+if /i "%choice%"=="N" goto PromptDeepFreeze
+goto PromptWindowsCamera
+
+:InstallWindowsCamera
+echo.
+echo [ OK ]
+start "" "%basepath%WindowsCameraInstaller.exe"
 goto PromptDeepFreeze
 
 :PromptDeepFreeze
@@ -211,3 +273,4 @@ if exist "%payloadps1%" (
 ) else (
     echo Payload PowerShell script not found!
 )
+
