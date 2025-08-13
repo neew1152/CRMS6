@@ -146,6 +146,25 @@ $asciiChrome = @"
         ===++++=:......        
 
 "@
+
+$asciiNetFx = @"
+
+              ++*++=====+****+=                +++++++++++===  
+           ++********+*********+=+           ++++++++++++===   
+         +++*******+++*********+++=         ++++++****+++==    
+        ++*******+=+ ++********+++++       ++++++****+++==      
+       ++******+==+   +++******++++++     ++++++****+++==      ####       ##   ######### ###########
+     +++******+++     ==++******+++++     +++++*****++==       #####      ##   ########  ###########
+    +++******++++     ===++*****++++++   ++++******++==        ######     ##   ###           ###    
+   +++******++++       ===++*****+++++   +++******+++          ### ###    ##   ###           ###    
+   ++******++++         ==++******+++++ +++******+++           ###  ###   ##   ########      ###    
+  ++********+++         +++++******++** ++******+++            ###   #### ##   ###           ###    
+ ++********+++           +++++******+***+*******++             ###     #####   ###           ###    
+ ++*******+++             +++++*****************          ###  ###      ####   ###           ###    
+++*******++                 *****************             ###  ###       ###   #########     ###    
+
+"@
+
 $asciiMicrosoftPhotos = @"
                                                                                                                                                                                           
      ++**********************             
@@ -170,22 +189,25 @@ $asciiMicrosoftPhotos = @"
             
 "@
 
-$asciiNetFx = @"
-
-              ++*++=====+****+=                +++++++++++===  
-           ++********+*********+=+           ++++++++++++===   
-         +++*******+++*********+++=         ++++++****+++==    
-        ++*******+=+ ++********+++++       ++++++****+++==      
-       ++******+==+   +++******++++++     ++++++****+++==      ####       ##   ######### ###########
-     +++******+++     ==++******+++++     +++++*****++==       #####      ##   ########  ###########
-    +++******++++     ===++*****++++++   ++++******++==        ######     ##   ###           ###    
-   +++******++++       ===++*****+++++   +++******+++          ### ###    ##   ###           ###    
-   ++******++++         ==++******+++++ +++******+++           ###  ###   ##   ########      ###    
-  ++********+++         +++++******++** ++******+++            ###   #### ##   ###           ###    
- ++********+++           +++++******+***+*******++             ###     #####   ###           ###    
- ++*******+++             +++++*****************          ###  ###      ####   ###           ###    
-++*******++                 *****************             ###  ###       ###   #########     ###    
-
+$asciiWindowsCamera = @"
+                                                                           
+            +=======++++                   
+ ========  ++++++++++++++                  
+==========++++++++++++++++++++++++++       
+===++++++++++++=-::-=++++++++++++++++      
+=+++++++++++-..........-*+++++=--=++*      
+++++++++++=..:=+======:..=*+++++++++*      
++++++++++-..============..-*++++++++*      
++++++++++:.-============-.:+*+++*****      
++++++++++:.==============.:+*********      
++++++++++:.-============-.:**********      
+++++++++*+:.:==========:.:+**********      
+++++++++***:..-======-..:************      
++++++++++****-:......:-**************      
++++++++++****************************      
+*****************###*****************      
+####################################       
+                                                                                                                  
 "@
 
 # Commands list with ASCII art
@@ -195,12 +217,14 @@ Ask-And-Run "Install Visual Studio Code" 'winget install -e --id Microsoft.Visua
 Ask-And-Run "Install Mozilla Firefox" 'winget install -e --id Mozilla.Firefox' $asciiFirefox
 Ask-And-Run "Install Tor Browser" 'winget install -e --id TorProject.TorBrowser' $asciiTorBrowser
 Ask-And-Run "Install Google Chrome" 'winget install -e --id Google.Chrome' $asciiChrome
-Ask-And-Run "Install Microsoft Photos" 'Get-AppxPackage -allusers Microsoft.Windows.Photos | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}' $asciiMicrosoftPhotos
 Ask-And-Run "Install .NET Framework 4" 'winget install -e --id Microsoft.DotNet.Framework.DeveloperPack_4' $asciiNetFx
 Ask-And-Run "Install .NET Framework 3.5" 'Enable-WindowsOptionalFeature -Online -FeatureName "NetFx3" -All -NoRestart' $asciiNetFx
+Ask-And-Run "Install Microsoft Photos" 'Get-AppxPackage -allusers Microsoft.Windows.Photos | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}' $asciiMicrosoftPhotos
+Ask-And-Run "Install Windows Camera" 'Get-AppxPackage -AllUsers *WindowsCamera* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}' $asciiWindowsCamera
 
 # Microsoft Activation Scripts
 Write-Host "[ OK ] irm https://get.activated.win | iex"
 irm https://get.activated.win | iex
+
 
 
