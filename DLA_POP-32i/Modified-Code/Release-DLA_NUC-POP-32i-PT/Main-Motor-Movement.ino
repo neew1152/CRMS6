@@ -117,51 +117,55 @@ void TTL(int Degree) {
 }
 
 void TTR(int Degree) {
-  // Turn right by 'Degree' relative to current heading
-  CurrentHeading -= Degree;  // subtract because turning right reduces angle
-
-  // Normalize CurrentHeading to 0-359
-  if (CurrentHeading < 0) CurrentHeading += 360;
+  // Step 1: Update current heading (right turn)
+  CurrentHeading += Degree;
   if (CurrentHeading >= 360) CurrentHeading -= 360;
+  if (CurrentHeading < 0) CurrentHeading += 360;
 
   int TargetDegree = CurrentHeading;
 
+  // Step 2: Begin turning right
   int Status = 0;
   MotorStop();
   if (WheelDrive == 0) sr(TurnSpeed);
   else SR(TurnSpeed);
 
+  // Read IMU a few times first
   for (int i = 0; i < 10; i++) {
     getIMU();
   }
 
+  // Step 3: Fast turn until close to target
   while (Status == 0) {
     if (getIMU()) {
-      // Check if pvYaw is between TargetDegree and TargetDegree+30 (accounting for wrap)
-      if ((pvYaw <= TargetDegree + 30 && pvYaw >= TargetDegree) ||
-          (TargetDegree + 30 >= 360 && pvYaw <= (TargetDegree + 30) - 360)) {
+      if ((pvYaw <= TargetDegree + 30) && (pvYaw >= TargetDegree)) {
         Status = 1;
+      } else if (TargetDegree >= 330) {
+        if ((pvYaw <= TargetDegree - 330) || (pvYaw >= 330))
+          Status = 1;
       }
     }
   }
 
+  // Step 4: Slow down for fine adjustment
   Status = 0;
   if (WheelDrive == 0) sr(20);
   else SR(20);
-
   while (Status == 0) {
     if (getIMU()) {
-      // Check if pvYaw is within ±5 degrees of TargetDegree (accounting for wrap)
-      if ((pvYaw <= TargetDegree + 5 && pvYaw >= TargetDegree - 5) ||
-          (TargetDegree - 5 < 0 && (pvYaw >= TargetDegree - 5 + 360 || pvYaw <= TargetDegree + 5))) {
+      if ((pvYaw <= TargetDegree + 5) && (pvYaw >= TargetDegree - 5)) {
         Status = 1;
+      } else if (TargetDegree >= 355) {
+        if ((pvYaw <= TargetDegree - 355) || (pvYaw >= TargetDegree - 5))
+          Status = 1;
       }
     }
   }
 
+  // Step 5: Brake and stop
   if (WheelDrive == 0) sl(BrakeSpeedIMU);
   else SL(BrakeSpeedIMU);
-
   delay(BrakeTimeIMU);
   MotorStop();
 }
+
