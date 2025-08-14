@@ -20,9 +20,9 @@ void Mission_1() {
   TracDegreeSpeedTime(60, 500);
   TTL(90);
   TracDegreeSpeedTime(60, 500);
-  TTR(90);
+  TTR(270);
   TracDegreeSpeedTime(60, 500);
-  TTR(90);
+  TTR(270);
 }
 
 void Mission_2() {
@@ -35,4 +35,5 @@ void Mission_4() {
 }
 
 void Mission_5() {
+
 }
