@@ -24,7 +24,7 @@
 
 ---
 
-### 4. Why does leaving the robot for a long time and then testing change the successful direction?
+### 4. Why does the successful direction change over time?
 
 * MEMS IMUs drift over time due to **temperature, gyro bias, or magnetic interference**.
 * Each time you power on and zero the IMU, the “0° reference” shifts slightly because of drift and environmental changes.
