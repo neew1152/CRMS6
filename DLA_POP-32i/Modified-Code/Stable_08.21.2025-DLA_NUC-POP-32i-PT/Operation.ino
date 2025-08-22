@@ -1,6 +1,6 @@
 void Operation() {
   delay(500);
-  calibrate_BornpvYaw();
+  Auto_zero();
   oled.text(6, 1, "zeroYaw Successfully"); beep(1);
   oled.show();
   waitSW_OK();
@@ -31,4 +31,5 @@ void Mission_4() {
 }
 
 void Mission_5() {
+
 }
