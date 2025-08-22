@@ -1,6 +1,6 @@
 void Experiment() {
   delay(500);
-  calibrate_BornpvYaw();
+  Auto_zero();
   oled.text(6, 1, "zeroYaw Successfully"); beep(1);
   oled.show();
   waitSW_A();
@@ -26,4 +26,5 @@ void Lab_2() {
 void Lab_3() {
 
 }
+
 
