@@ -32,7 +32,7 @@ void setup() {
   oled.text(3, 2, "SW_OK > Operation");
   oled.text(5, 2, "SW_A > Experiment");
   oled.text(7, 1, "SW_B > Analog - Yaw");
-  oled.show(); 
+  oled.show(); beep(1);
 }
 
 void loop() {
