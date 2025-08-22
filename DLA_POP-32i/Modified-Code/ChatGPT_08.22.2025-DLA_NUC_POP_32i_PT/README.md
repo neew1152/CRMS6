@@ -1,4 +1,4 @@
-# Understanding Robot Rotation IMU's Issues
+# [Understanding Robot Rotation IMU's Issues](https://chatgpt.com/share/68a89dba-1b84-8003-8d5a-ba8ad856694d)
 
 ### 1. Why does the degree freeze in `ReadMPU()`?
 
