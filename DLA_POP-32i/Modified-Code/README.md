@@ -5,13 +5,6 @@
 |----------|
 | Hotfix_08.21.2025-DLA_NUC-POP-32i-PT |
 
-# 🔴 What's new: Hotfix_08.21.2025-DLA_NUC-POP-32i-PT
-- idk, just recopy everything, and the IMU works (no, it isn't)
-
-| Based on |
-|----------|
-| Stable_08.21.2025-DLA_NUC-POP-32i-PT |
-
 ---
 
 # ✅ What's new: Stable_08.21.2025-DLA_NUC-POP-32i-PT
@@ -109,6 +102,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
+
 
 
 
