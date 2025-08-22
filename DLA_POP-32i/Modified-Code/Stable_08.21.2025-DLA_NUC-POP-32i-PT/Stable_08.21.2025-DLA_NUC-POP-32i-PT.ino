@@ -79,7 +79,7 @@ void loop() {
     oled.clear();
     Show7Analog();
     oled.clear();
-    calibrate_BornpvYaw();
+    Auto_zero();
     ReadMPU();
   }
 }
