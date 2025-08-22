@@ -1,3 +1,10 @@
+# ✅ What's new: ChatGPT_08.22.2025-DLA_NUC_POP_32i_PT
+- ✅ ChatGPT 100%
+
+| Based on |
+|----------|
+| Hotfix_08.21.2025-DLA_NUC-POP-32i-PT |
+
 # 🔴 What's new: Hotfix_08.21.2025-DLA_NUC-POP-32i-PT
 - idk, just recopy everything, and the IMU works (no, it isn't)
 
@@ -102,6 +109,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
+
 
 
 
