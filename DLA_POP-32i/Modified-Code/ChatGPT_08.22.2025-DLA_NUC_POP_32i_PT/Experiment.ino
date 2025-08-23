@@ -10,8 +10,6 @@ void Experiment() {
   Lab_2();
   Lab_3();
 
-  oled.clear();
-  oled.text(3, 5, "Experiment");
   oled.text(5, 4, "Successfully!");
   oled.show(); beep(1);
 }
@@ -27,6 +25,7 @@ void Lab_2() {
 void Lab_3() {
 
 }
+
 
 
 
