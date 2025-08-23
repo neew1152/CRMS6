@@ -1,5 +1,5 @@
 # ✅ What's new: Stable_08.23.2025-DLA_NUC_POP_32i_PT
-- ✅ ChatGPT 100%
+- A lot
 
 | Based on |
 |----------|
@@ -111,6 +111,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
+
 
 
 
