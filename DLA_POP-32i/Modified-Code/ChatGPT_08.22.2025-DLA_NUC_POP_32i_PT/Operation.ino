@@ -1,5 +1,4 @@
 void Operation() {
-  delay(500);
   calibrate_IMU();
   waitSW_OK();
   oled.clear();
@@ -48,4 +47,5 @@ void Mission_4() {
 }
 
 void Mission_5() {
+
 }
