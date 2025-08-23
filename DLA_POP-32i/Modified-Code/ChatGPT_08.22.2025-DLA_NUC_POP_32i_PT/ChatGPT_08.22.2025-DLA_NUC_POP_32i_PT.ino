@@ -1,6 +1,8 @@
 #include <POP32.h>
 #define BrakeSpeedIMU 100
 #define BrakeTimeIMU 10
+#define max 0
+#define min 2000
 #define SW_pin 18
 #define WheelDrive 1
 #define No 0
