@@ -3,7 +3,7 @@
 
 | Based on |
 |----------|
-| Hotfix_08.21.2025-DLA_NUC-POP-32i-PT |
+| Stable_08.21.2025-DLA_NUC-POP-32i-PT |
 
 ---
 
@@ -102,6 +102,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
+
 
 
 
