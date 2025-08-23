@@ -164,9 +164,9 @@ void updateIMU() {
 }
 
 void calibrate_IMU() {
-  delay(500); zeroYaw();         // reset once at startup
   oled.clear();
   oled.text(2, 3, "Calibrating IMU");
+  delay(500); zeroYaw();  // reset once at startup
 
   // Wait until IMU is outputting valid data
   unsigned long timer = millis();
@@ -271,5 +271,6 @@ long int ReadTimer3() {
   return (millis() - Timer3);
 
 }
+
 
 
