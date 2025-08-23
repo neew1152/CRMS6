@@ -4,42 +4,37 @@ void InitialSpeed() {
   KiB = 0;
   Error = 0;
   PreError = 0;
-  if(BaseSpeed<=40)
-  {
-    LeftBaseSpeed = BaseSpeed-1;
-    RightBaseSpeed = BaseSpeed-0;
-    BackLeftBaseSpeed = BaseSpeed-0;
-    BackRightBaseSpeed = BaseSpeed-0;
-    Kp = 10;       //forward PID
+  if (BaseSpeed <= 40) {
+    LeftBaseSpeed = BaseSpeed - 0;
+    RightBaseSpeed = BaseSpeed - 0;
+    BackLeftBaseSpeed = BaseSpeed - 0;
+    BackRightBaseSpeed = BaseSpeed - 0;
+    Kp = 10;  //forward PID
     Kd = 25;
     Kt = 10;
-    KpB = 10;       //backward PID
+    KpB = 10;  //backward PID
     KdB = 25;
     KtB = 10;
-  }
-  else if(BaseSpeed<=60)
-  {
-    LeftBaseSpeed = BaseSpeed- 0.7;
-    RightBaseSpeed = BaseSpeed-0;
-    BackLeftBaseSpeed = BaseSpeed-0;
-    BackRightBaseSpeed = BaseSpeed-0;
-    Kp = 13;       //forward PID
+  } else if (BaseSpeed <= 60) {
+    LeftBaseSpeed = BaseSpeed - 0;
+    RightBaseSpeed = BaseSpeed - 0;
+    BackLeftBaseSpeed = BaseSpeed - 0;
+    BackRightBaseSpeed = BaseSpeed - 0;
+    Kp = 13;  //forward PID
     Kd = 30;
     Kt = 10;
-    KpB = 13;       //backward PID
+    KpB = 13;  //backward PID
     KdB = 30;
     KtB = 10;
-  }
-  else if(BaseSpeed<=80)
-  {
-    LeftBaseSpeed = BaseSpeed- 0;
-    RightBaseSpeed = BaseSpeed- 0;
-    BackLeftBaseSpeed = BaseSpeed-0;
-    BackRightBaseSpeed = BaseSpeed-0;
-    Kp = 19;       //forward PID
+  } else if (BaseSpeed <= 80) {
+    LeftBaseSpeed = BaseSpeed - 0;
+    RightBaseSpeed = BaseSpeed - 0;
+    BackLeftBaseSpeed = BaseSpeed - 0;
+    BackRightBaseSpeed = BaseSpeed - 0;
+    Kp = 19;  //forward PID
     Kd = 30;
     Kt = 10;
-    KpB = 19;       //backward PID
+    KpB = 19;  //backward PID
     KdB = 30;
     KtB = 8;
   }
@@ -120,5 +115,3 @@ void TracPIDBack() {
   PreError = Error;
   SumError += Error;
 }
-
-
