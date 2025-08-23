@@ -1,19 +1,21 @@
 #include <POP32.h>
-float pvYaw;
-uint8_t rxCnt = 0, rxBuf[8];
-float BaseSpeed, LeftBaseSpeed, RightBaseSpeed, BackLeftBaseSpeed, BackRightBaseSpeed, TurnSpeed, MaxSpeed;
-int Error, PreError, SumError, Kp, Kd, Ki, Kt, KpB, KdB, KiB, KtB;
-int L2, R2, BL2, BR2, RefL2, RefR2, RefBL2, RefBR2;
-long MotorStop_Delay, Timer, Timer2, Timer3;
-
-#define SW_pin 18
-#define No 0
-#define Yes 1
 #define BrakeSpeedIMU 100
 #define BrakeTimeIMU 10
+#define SW_pin 18
 #define WheelDrive 1
+#define No 0
+#define Yes 1
+
 int PidStatus = 0;
 int CurrentHeading = 0; // Keep track of current heading, 0° initially
+
+int L2, R2, BL2, BR2, RefL2, RefR2, RefBL2, RefBR2;
+int Error, PreError, SumError, Kp, Kd, Ki, Kt, KpB, KdB, KiB, KtB;
+long Timer, Timer2, Timer3;
+float pvYaw;
+float MotorStop_Delay, BaseSpeed, LeftBaseSpeed, RightBaseSpeed, BackLeftBaseSpeed, BackRightBaseSpeed, TurnSpeed, MaxSpeed;
+
+uint8_t rxCnt = 0, rxBuf[8];
 
 void setup() {
   BaseSpeed = 50;
@@ -37,8 +39,6 @@ void setup() {
 
 void loop() {
   if (SW_OK()) {
-    StartTimer(); StartTimer2();
-
     oled.clear();
     oled.text(3, 2, "SW_OK > Operation");
     oled.show();
@@ -47,8 +47,6 @@ void loop() {
   }
 
   if (SW_A()) {
-    StartTimer(); StartTimer2();
-
     oled.clear();
     oled.text(5, 2, "SW_A > Experiment");
     oled.show();
@@ -57,8 +55,6 @@ void loop() {
   }
 
   if (SW_B()) {
-    StartTimer();
-
     Show7Analog();
     calibrate_IMU();
     ReadMPU();
