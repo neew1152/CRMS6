@@ -89,51 +89,6 @@ int ReadZXSonar() {
 
 
 
-// PID //
-void TracPID() {
-  int Output, LeftOutput, RightOutput;
-  Output = (Kp * Error) + (Ki * SumError) + (Kd * (Error - PreError));
-  LeftOutput = LeftBaseSpeed + Output;
-  RightOutput = RightBaseSpeed - Output;
-  if (PidStatus != 0) {
-    LeftOutput = constrain(LeftOutput, -MaxSpeed, MaxSpeed);
-    RightOutput = constrain(RightOutput, -MaxSpeed, MaxSpeed);
-  } else {
-    LeftOutput = constrain(LeftOutput, 0, MaxSpeed);
-    RightOutput = constrain(RightOutput, 0, MaxSpeed);
-  }
-  motor(1, LeftOutput);
-  motor(2, LeftOutput);
-  motor(3, RightOutput);
-  motor(4, RightOutput);
-  PreError = Error;
-  SumError += Error;
-}
-
-void TracPIDBack() {
-  int Output, LeftOutput, RightOutput;
-  Output = (KpB * Error) + (KiB * SumError) + (KdB * (Error - PreError));
-  LeftOutput = BackLeftBaseSpeed + Output;
-  RightOutput = BackRightBaseSpeed - Output;
-  if (PidStatus != 0) {
-    LeftOutput = constrain(LeftOutput, -MaxSpeed, MaxSpeed);
-    RightOutput = constrain(RightOutput, -MaxSpeed, MaxSpeed);
-  } else {
-    LeftOutput = constrain(LeftOutput, 0, MaxSpeed);
-    RightOutput = constrain(RightOutput, 0, MaxSpeed);
-  }
-  motor(1, -LeftOutput);
-  motor(2, -LeftOutput);
-  motor(3, -RightOutput);
-  motor(4, -RightOutput);
-  PreError = Error;
-  SumError += Error;
-}
-
-
-
-
-
 // MPU6050 //
 bool CalErrorGyro(int Degree) {
   if (getIMU()) {
@@ -270,6 +225,7 @@ long int ReadTimer3() {
   return (millis() - Timer3);
 
 }
+
 
 
 
