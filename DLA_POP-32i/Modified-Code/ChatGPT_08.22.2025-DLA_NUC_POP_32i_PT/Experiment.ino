@@ -1,5 +1,4 @@
 void Experiment() {
-  delay(500);
   calibrate_IMU();
   waitSW_A();
   oled.clear();
@@ -28,5 +27,6 @@ void Lab_2() {
 void Lab_3() {
 
 }
+
 
 
