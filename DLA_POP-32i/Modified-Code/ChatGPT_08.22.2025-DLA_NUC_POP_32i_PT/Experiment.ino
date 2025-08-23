@@ -6,8 +6,8 @@ void Experiment() {
   waitSW_A();
   oled.clear();
   oled.text(3, 0, "Running Laboratory...");
-  beep(1); delay(500);
-  oled.show();
+  oled.show(); beep(1);
+  delay(500);
 
   Lab_1();
   Lab_2();
@@ -16,7 +16,7 @@ void Experiment() {
   oled.clear();
   oled.text(3, 5, "Experiment");
   oled.text(5, 4, "Successfully!");
-  oled.show();
+  oled.show(); beep(1);
 }
 
 void Lab_1() {
@@ -30,4 +30,5 @@ void Lab_2() {
 void Lab_3() {
 
 }
+
 
