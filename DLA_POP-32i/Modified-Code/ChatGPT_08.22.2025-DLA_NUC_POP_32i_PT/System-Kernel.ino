@@ -1,6 +1,3 @@
-#define min 2000
-#define max 0
-
 //  Analog //
 void InitialRef() {
   RefL2 = 990;
@@ -275,4 +272,5 @@ void StartTimer3() {
 }
 long int ReadTimer3() {
   return (millis() - Timer3);
+
 }
