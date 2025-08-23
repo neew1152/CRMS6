@@ -2,7 +2,6 @@ void TracDegreeSpeedTime(float MotorSpeed, int Time) {
   int TempPidStatus = PidStatus;
   int Degree = CurrentHeading;  // Track current heading dynamically
   BaseSpeed = MotorSpeed;
-  MotorStop();
   StartTimer();
   InitialSpeed();
   CalErrorGyro(Degree);
@@ -21,7 +20,6 @@ void TracDegreeSpeedTimeBack(float MotorSpeed, int Time) {
   int TempPidStatus = PidStatus;
   int Degree = CurrentHeading;  // Track current heading dynamically
   BaseSpeed = MotorSpeed;
-  MotorStop();
   StartTimer();
   InitialSpeed();
   CalErrorGyroBack(Degree);
@@ -36,52 +34,44 @@ void TracDegreeSpeedTimeBack(float MotorSpeed, int Time) {
   PidStatus = TempPidStatus;
 }
 
-void ForwardBalance(float MotorSpeed, int reverse_delay) {
+void Forward_Balance(float MotorSpeed, int reverse_delay) {
   BaseSpeed = MotorSpeed;
   while (1) {
-      ConvertADC();
-      if ((L2 == 0) && (R2 == 0)) {
-          MotorStop();
-          break;
-      }
-      else if (R2 == 0) {
-          motor(12, LeftBaseSpeed);
-          motor(34, -RightBaseSpeed);
-      }
-      else if (L2 == 0) {
-          motor(12, -LeftBaseSpeed);
-          motor(34, RightBaseSpeed);
-      }
-      else {
-          ForwardSpeed(MotorSpeed);
-      }
+    ConvertADC();
+    if ((L2 == 0) && (R2 == 0)) {
+      MotorStop();
+      break;
+    } else if (R2 == 0) {
+      motor(12, LeftBaseSpeed);
+      motor(34, -RightBaseSpeed);
+    } else if (L2 == 0) {
+      motor(12, -LeftBaseSpeed);
+      motor(34, RightBaseSpeed);
+    } else {
+      ForwardSpeed(MotorSpeed);
+    }
   }
   BackwardSpeedTime(MotorSpeed, reverse_delay);
-  MotorStop();
 }
 
-void BackwardBalance(float MotorSpeed, int reverse_delay) {
+void Backward_Balance(float MotorSpeed, int reverse_delay) {
   BaseSpeed = MotorSpeed;
   while (1) {
-      ConvertADC();
-      if ((BL2 == 0) && (BR2 == 0)) {
-          MotorStop();
-          break;
-      }
-      else if (BR2 == 0) {
-          motor(12, -LeftBaseSpeed);
-          motor(34, RightBaseSpeed);
-      }
-      else if (BL2 == 0) {
-          motor(12, LeftBaseSpeed);
-          motor(34, -RightBaseSpeed);
-      }
-      else {
-          BackwardSpeed(MotorSpeed);
-      }
+    ConvertADC();
+    if ((BL2 == 0) && (BR2 == 0)) {
+      MotorStop();
+      break;
+    } else if (BR2 == 0) {
+      motor(12, -LeftBaseSpeed);
+      motor(34, RightBaseSpeed);
+    } else if (BL2 == 0) {
+      motor(12, LeftBaseSpeed);
+      motor(34, -RightBaseSpeed);
+    } else {
+      BackwardSpeed(MotorSpeed);
+    }
   }
   ForwardSpeedTime(MotorSpeed, reverse_delay);
-  MotorStop();
 }
 
 void TTL(int Degree) {
@@ -159,4 +149,3 @@ void TTR(int Degree) {
   delay(BrakeTimeIMU);
   MotorStop();
 }
-
