@@ -127,7 +127,7 @@ void calibrate_IMU() {
   unsigned long timer = millis();
   while (millis() - timer < 2000) {  // wait ~2s for stable data
     if (getIMU()) {      
-      oled.text(4, 3, "pvYaw: %f", pvYaw);
+      oled.text(4, 2, "pvYaw: %f", pvYaw);
       oled.show();
     }
   }
@@ -182,7 +182,7 @@ void Show_pvYaw() {
 
     float pvYaw_Value = normalizeYaw(pvYaw); // always in 0..360
 
-    oled.text(4, 3, "pvYaw = %f", pvYaw_Value);
+    oled.text(4, 2, "pvYaw = %f", pvYaw_Value);
     oled.show();
   }
 }
@@ -225,6 +225,7 @@ long int ReadTimer3() {
   return (millis() - Timer3);
 
 }
+
 
 
 
