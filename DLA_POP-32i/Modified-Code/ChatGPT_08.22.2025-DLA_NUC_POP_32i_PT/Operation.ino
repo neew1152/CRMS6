@@ -12,8 +12,6 @@ void Operation() {
   Mission_4();
   Mission_5();
 
-  oled.clear();
-  oled.text(3, 6, "Operation");
   oled.text(5, 4, "Successfully!");
   oled.show(); beep(1);
 }
@@ -49,3 +47,4 @@ void Mission_4() {
 void Mission_5() {
 
 }
+
