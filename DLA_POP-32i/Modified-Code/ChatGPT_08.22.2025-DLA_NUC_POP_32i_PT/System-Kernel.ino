@@ -164,7 +164,7 @@ void updateIMU() {
 }
 
 void calibrate_IMU() {
-  zeroYaw();         // reset once at startup
+  delay(500); zeroYaw();         // reset once at startup
   oled.clear();
   oled.text(2, 3, "Calibrating IMU");
 
@@ -271,4 +271,5 @@ long int ReadTimer3() {
   return (millis() - Timer3);
 
 }
+
 
