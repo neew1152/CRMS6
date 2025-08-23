@@ -43,8 +43,7 @@ void loop() {
   if (SW_OK()) {
     oled.clear();
     oled.text(3, 2, "SW_OK > Operation");
-    oled.show();
-    delay(500);
+    oled.show(); delay(500);
     Operation();
     MotorStop();
   }
@@ -52,8 +51,7 @@ void loop() {
   if (SW_A()) {
     oled.clear();
     oled.text(5, 2, "SW_A > Experiment");
-    oled.show();
-    delay(500);
+    oled.show(); delay(500);
     Experiment();
     MotorStop();
   }
