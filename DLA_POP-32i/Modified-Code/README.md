@@ -1,3 +1,12 @@
+# ✅ What's new: Stable_08.24.2025-DLA_NUC_POP_32i_PT
+- Reupload
+
+| Based on |
+|----------|
+| ChatGPT_Stable_08.23.2025-DLA_NUC_POP_32i_PT |
+
+---
+
 # ✅ What's new: Stable_08.23.2025-DLA_NUC_POP_32i_PT
 - A lot
 
@@ -111,6 +120,7 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
+
 
 
 
