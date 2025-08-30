@@ -18,12 +18,12 @@ void Operation() {
   beep(1);
 }
 
-//  _______________________________________
-// | TracDegreeSpeedTime(80); Motorstop(); |
-// | ------------------------------------- |
-// | 2B |               300T               |
-// | 3B |               600T               |
-// | 4B |               900T               |
+//  ___________________________________
+// | TracDegreeSpeedTime() Motorstop() |
+// | --------------------------------- |
+// | 2B |             300T             |
+// | 3B |             600T             |
+// | 4B |             900T             |
 
 // Forward_Balance(40, 250);
 // Backward_Balance(40, 400);
@@ -43,3 +43,4 @@ void Mission_4() {
 
 void Mission_5() {
 }
+
