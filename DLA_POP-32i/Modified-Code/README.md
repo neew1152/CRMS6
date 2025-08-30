@@ -1,5 +1,6 @@
 # ✅ What's new: Stable_08.30.2025-DLA_NUC_POP_32i_PT
-- Add U_TTL() && U_TTR()
+- Create U_TTL()
+- Create U_TTR()
 
 | Based on |
 |----------|
@@ -129,3 +130,4 @@
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
+
