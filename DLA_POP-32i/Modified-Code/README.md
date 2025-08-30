@@ -1,3 +1,12 @@
+# ✅ What's new: Stable_08.30.2025-DLA_NUC_POP_32i_PT
+- Add U_TTL() && U_TTR()
+
+| Based on |
+|----------|
+| Stable_08.28.2025-DLA_NUC_POP_32i_PT |
+
+---
+
 # ✅ What's new: Stable_08.28.2025-DLA_NUC_POP_32i_PT
 - Reupload
 
@@ -49,9 +58,9 @@
 
 # ✅ What's new: Stable_08.06.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - Someone requested me to bring back the Old-Motor-Movement.ino
-- Remove Forward();
-- Remove Backward();
-- Create BackwardSpeed();
+- Remove Forward()
+- Remove Backward()
+- Create BackwardSpeed()
 - Optimized Main-Motor-Movement.ino
 - Rewrite Servo.ino
 
@@ -65,10 +74,10 @@
 # ✅ What's new: Stable_07.20.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
 - New display menu
 - Remove Switch.ino
-- Move display menu to loop();
-- set SW_A for Show7Analog();
-- Create Move_Left();
-- Create Move_Right();
+- Move display menu to loop()
+- set SW_A for Show7Analog()
+- Create Move_Left()
+- Create Move_Right()
 - Modified Main-Motor-Movement.ino
 - Modified Motor-Movement-Kernel.ino
 - etc.
@@ -82,7 +91,7 @@
 ---
 
 # ✅ What's new: Stable_07.19.2025-DLA_NUC-POP32i-MEDIUM-4-MOTOR-MPU6050
-- add MotorStop();
+- add MotorStop()
 - etc.
 
 | Based on |
@@ -113,33 +122,10 @@
 - Remove Finish.ino
 - Remove Mode.ino
 - Remove Knob
-- Remove SetSpeed();
-- Remove Balance();
-- Remove June();
+- Remove SetSpeed()
+- Remove Balance()
+- Remove June()
 
 | Based on |
 |----------|
 | Fix-IMU-Newclear-Pop32-Medium-4wheel |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
