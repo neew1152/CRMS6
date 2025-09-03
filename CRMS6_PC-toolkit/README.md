@@ -1,11 +1,13 @@
 # CRMS6 PC Toolkit
+
+<img width="1128" height="634" alt="image" src="https://github.com/user-attachments/assets/33bec98a-526a-455d-bd1c-d0daf16402d5" />
+
 This toolkit contains a collection of batch and PowerShell scripts designed to automate the setup and configuration of a Windows environment.
 ### [Clean Installation Windows 11 PC](https://github.com/neew1152/Clean-Installation-Windows-11-Personal-User)
 
 ---
 
 ## Overview
-<img width="1128" height="634" alt="image" src="https://github.com/user-attachments/assets/33bec98a-526a-455d-bd1c-d0daf16402d5" />
 
 The CRMS6 PC Toolkit is a comprehensive system management tool designed for two primary purposes:
 1. **Honeypot Configuration** - Deliberately weakens system security to attract attackers for monitoring
