@@ -1,5 +1,5 @@
 # CRMS6 PC Toolkit
-This toolkit contains a collection of batch and PowerShell scripts designed to automate the setup and configuration of a Windows environment.
+> This toolkit contains a collection of batch and PowerShell scripts designed to automate the setup and configuration of a Windows environment.
 
 <img width="1128" height="634" alt="image" src="https://github.com/user-attachments/assets/33bec98a-526a-455d-bd1c-d0daf16402d5" />
 
