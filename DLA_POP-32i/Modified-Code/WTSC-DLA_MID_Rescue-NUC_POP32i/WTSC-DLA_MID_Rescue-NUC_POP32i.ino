@@ -11,11 +11,11 @@
 int PidStatus = 0;
 int CurrentHeading = 0; // Keep track of current heading, 0° initially
 
-int Def_Servo_Front, Def_Servo_Back, L2, R2, BL2, BR2, RefL2, RefR2, RefBL2, RefBR2;
+int MotorStop_Delay, Def_Servo_Front, Def_Servo_Back, L2, R2, BL2, BR2, RefL2, RefR2, RefBL2, RefBR2;
 int Error, PreError, SumError, Kp, Kd, Ki, Kt, KpB, KdB, KiB, KtB;
 long Timer, Timer2, Timer3;
 float pvYaw;
-float MotorStop_Delay, BaseSpeed, LeftBaseSpeed, RightBaseSpeed, BackLeftBaseSpeed, BackRightBaseSpeed, TurnSpeed, MaxSpeed;
+float BaseSpeed, LeftBaseSpeed, RightBaseSpeed, BackLeftBaseSpeed, BackRightBaseSpeed, TurnSpeed, MaxSpeed;
 
 uint8_t rxCnt = 0, rxBuf[8];
 
