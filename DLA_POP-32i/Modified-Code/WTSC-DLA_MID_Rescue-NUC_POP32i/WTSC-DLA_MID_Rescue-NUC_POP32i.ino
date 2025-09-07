@@ -32,7 +32,7 @@ void setup() {
 
   oled.clear();
   oled.textSize(2);
-  oled.text(0, 0, "DLA POP-32i");
+  oled.text(0, 0, "WT POP-32i");
   oled.show(); 
   oled.textSize(1);
   oled.text(2, 0, "---------------------");
