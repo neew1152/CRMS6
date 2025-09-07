@@ -1,7 +1,7 @@
 # ❓ FAQ
 
 ## ทำไมไฟล์วิดีโอดูไม่ได้
-> Encode AV1 ใช้ VLC media player หรือ [Google Drive](https://drive.google.com/drive/folders/1k7fHTx193lf2Sx8X7p1cu4k8fWOns9yI)
+> Encode AV1 ใช้ VLC media player หรือ [Google Drive](https://drive.google.com/drive/folders/1qhZoBWKubuwgzbsChi92CIBQ9YKLyMjh)
 
 ## ถ้าอัปโหลดไม่สำเร็จจะเกิดอะไรขึ้น
 > โค้ดไม่สมบูรณ์และทำให้ Bootloader เสียหาย อาจจะปิดเครื่องแล้วถอดแหล่งจ่ายไฟ รอประมาณ 2 ชั่วโมง ไมโครคอนโทรลเลอร์จะพยายาม Recovery ตัวเอง
