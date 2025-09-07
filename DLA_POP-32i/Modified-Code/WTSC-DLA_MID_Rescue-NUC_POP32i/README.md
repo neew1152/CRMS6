@@ -26,3 +26,19 @@
 [GitHub](https://github.com/neew1152/)
 
 [Download This Directory](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fneew1152%2FCRMS6%2Ftree%2Fmain%2FDLA_POP-32i%2FModified-Code%2FWTSC-DLA_MID_Rescue-NUC_POP32i)
+> Rename to WTSC-DLA_MID_Rescue-NUC_POP32i.zip > Extract to "WTSC-DLA_MID_Rescue-NUC_POP32i\"
+```cmd
+WTSC-DLA_MID_Rescue-NUC_POP32i
+    │   Experiment.ino
+    │   Main-Motor-Movement.ino
+    │   Motor-Movement-Kernel.ino
+    │   Operation.ino
+    │   README.md
+    │   System-Kernel.ino
+    │   WTSC-DLA_MID_Rescue-NUC_POP32i.ino
+    │
+    └───Docs
+            PID-Explained.mp4
+            POP32i-Sheet230316-re.pdf
+            Stable-DLA_MID_Rescue-NUC_POP32i.mp4
+```
