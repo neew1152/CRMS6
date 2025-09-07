@@ -8,10 +8,10 @@ void InitialSpeed() {
   // It's recommended to use ForwardSpeedTime() for motor tuning.
 
   if (BaseSpeed <= 40) {
-    LeftBaseSpeed = BaseSpeed - 0;
-    RightBaseSpeed = BaseSpeed - 1;
-    BackLeftBaseSpeed = BaseSpeed - 0;
-    BackRightBaseSpeed = BaseSpeed - 0;
+    LeftBaseSpeed = BaseSpeed - 0.0;
+    RightBaseSpeed = BaseSpeed - 0.0;
+    BackLeftBaseSpeed = BaseSpeed - 0.0;
+    BackRightBaseSpeed = BaseSpeed - 0.0;
     Kp = 10;  // Forward PID
     Kd = 25;
     Kt = 10;
@@ -19,10 +19,10 @@ void InitialSpeed() {
     KdB = 25;
     KtB = 10;
   } else if (BaseSpeed <= 60) {
-    LeftBaseSpeed = BaseSpeed - 1.25;
-    RightBaseSpeed = BaseSpeed - 0;
-    BackLeftBaseSpeed = BaseSpeed - 0;
-    BackRightBaseSpeed = BaseSpeed - 0;
+    LeftBaseSpeed = BaseSpeed - 0.0;
+    RightBaseSpeed = BaseSpeed - 0.0;
+    BackLeftBaseSpeed = BaseSpeed - 0.0;
+    BackRightBaseSpeed = BaseSpeed - 0.0;
     Kp = 13;  // Forward PID
     Kd = 30;
     Kt = 10;
@@ -30,10 +30,10 @@ void InitialSpeed() {
     KdB = 30;
     KtB = 10;
   } else if (BaseSpeed <= 80) {
-    LeftBaseSpeed = BaseSpeed - 3;
-    RightBaseSpeed = BaseSpeed - 0;
-    BackLeftBaseSpeed = BaseSpeed - 0;
-    BackRightBaseSpeed = BaseSpeed - 0;
+    LeftBaseSpeed = BaseSpeed - 0.0;
+    RightBaseSpeed = BaseSpeed - 0.0;
+    BackLeftBaseSpeed = BaseSpeed - 0.0;
+    BackRightBaseSpeed = BaseSpeed - 0.0;
     Kp = 19;  // Forward PID
     Kd = 30;
     Kt = 10;
@@ -118,3 +118,4 @@ void TracPIDBack() {
   PreError = Error;
   SumError += Error;
 }
+
