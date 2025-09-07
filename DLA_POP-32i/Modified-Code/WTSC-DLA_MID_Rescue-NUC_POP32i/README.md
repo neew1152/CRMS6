@@ -26,7 +26,7 @@
 [GitHub](https://github.com/neew1152/)
 
 [Download This Directory](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fneew1152%2FCRMS6%2Ftree%2Fmain%2FDLA_POP-32i%2FModified-Code%2FWTSC-DLA_MID_Rescue-NUC_POP32i)
-> Rename to WTSC-DLA_MID_Rescue-NUC_POP32i.zip > Extract to "WTSC-DLA_MID_Rescue-NUC_POP32i\"
+> Rename to "WTSC-DLA_MID_Rescue-NUC_POP32i.zip" > Extract to "WTSC-DLA_MID_Rescue-NUC_POP32i\\"
 ```cmd
 WTSC-DLA_MID_Rescue-NUC_POP32i
     │   Experiment.ino
