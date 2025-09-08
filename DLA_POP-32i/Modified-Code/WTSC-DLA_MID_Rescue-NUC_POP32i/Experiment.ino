@@ -15,7 +15,7 @@ void Experiment() {
 }
 
 //  _____________________________________
-// | TracDegreeSpeedTime(60) Motorstop() |
+// | TracDegreeSpeedTime(60) MotorStop() |
 // | ----------------------------------- |
 // | 1B |              300T              |
 // | 2B |              600T              |
@@ -37,6 +37,7 @@ void Lab_2() {
 void Lab_3() {
 
 }
+
 
 
 
