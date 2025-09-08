@@ -17,7 +17,7 @@ void Operation() {
 }
 
 //  _____________________________________
-// | TracDegreeSpeedTime(60) Motorstop() |
+// | TracDegreeSpeedTime(60) MotorStop() |
 // | ----------------------------------- |
 // | 1B |              300T              |
 // | 2B |              600T              |
@@ -47,4 +47,5 @@ void Mission_4() {
 
 void Mission_5() {
 }
+
 
