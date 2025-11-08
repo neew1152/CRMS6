@@ -67,26 +67,3 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
 "MitigationOptions"=dword:00000000
 
-; Allow SYN Floods to attract network-based attacks
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
-"SynAttackProtect"=dword:00000000
-"EnableDeadGWDetect"=dword:00000001
-
-; Enable Remote Desktop to lure attackers
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
-"fDenyTSConnections"=dword:00000000
-
-; Weaken password policy to attract brute-force attempts
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters]
-"MaximumPasswordAge"=dword:00000007
-"MinimumPasswordLength"=dword:00000004
-
-; Enable SMBv1 to mimic outdated, vulnerable systems
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
-"SMB1"=dword:00000001
-
-; Expose additional services by enabling File and Printer Sharing
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
-"AutoShareServer"=dword:00000001
-
-"AutoShareWks"=dword:00000001
