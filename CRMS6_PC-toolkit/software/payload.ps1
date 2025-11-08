@@ -189,27 +189,6 @@ $asciiMicrosoftPhotos = @"
             
 "@
 
-$asciiWindowsCamera = @"
-                                                                           
-            +=======++++                   
- ========  ++++++++++++++                  
-==========++++++++++++++++++++++++++       
-===++++++++++++=-::-=++++++++++++++++      
-=+++++++++++-..........-*+++++=--=++*      
-++++++++++=..:=+======:..=*+++++++++*      
-+++++++++-..============..-*++++++++*      
-+++++++++:.-============-.:+*+++*****      
-+++++++++:.==============.:+*********      
-+++++++++:.-============-.:**********      
-++++++++*+:.:==========:.:+**********      
-++++++++***:..-======-..:************      
-+++++++++****-:......:-**************      
-+++++++++****************************      
-*****************###*****************      
-####################################       
-                                                                                                                  
-"@
-
 # Commands list with ASCII art
 Ask-And-Run "Install 7-Zip" 'winget install -e --id 7zip.7zip' $ascii7zip
 Ask-And-Run "Install Arduino IDE (Stable)" 'winget install -e --id ArduinoSA.IDE.stable' $asciiArduino
@@ -220,11 +199,7 @@ Ask-And-Run "Install Google Chrome" 'winget install -e --id Google.Chrome' $asci
 Ask-And-Run "Install .NET Framework 4" 'winget install -e --id Microsoft.DotNet.Framework.DeveloperPack_4' $asciiNetFx
 Ask-And-Run "Install .NET Framework 3.5" 'Enable-WindowsOptionalFeature -Online -FeatureName "NetFx3" -All -NoRestart' $asciiNetFx
 Ask-And-Run "Install Microsoft Photos" 'Get-AppxPackage -allusers Microsoft.Windows.Photos | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}' $asciiMicrosoftPhotos
-Ask-And-Run "Install Windows Camera" 'Get-AppxPackage -AllUsers *WindowsCamera* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}' $asciiWindowsCamera
 
 # Microsoft Activation Scripts
 Write-Host "[ OK ] irm https://get.activated.win | iex"
 irm https://get.activated.win | iex
-
-
-
