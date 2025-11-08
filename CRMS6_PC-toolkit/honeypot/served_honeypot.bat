@@ -50,12 +50,7 @@ if exist "%payloadreg%" (
     echo [ OK ] Disable User Access Control
     echo [ OK ] Disable Action Center
     echo [ OK ] Enable PowerShell Script Execution
-    echo [ OK ] Disable Spectre/Meltdown mitigations 
-    echo [ OK ] Allow SYN Floods
-    echo [ OK ] Enable Remote Desktop
-    echo [ OK ] Weaken password policy
-    echo [ OK ] Enable SMBv1
-    echo [ OK ] Enable File and Printer Sharing
+    echo [ OK ] Disable Spectre/Meltdown mitigations
 ) else (
     echo Payload registry not found: %payloadreg%
 )
@@ -107,3 +102,4 @@ echo   /_/ /____/\____/\___/_/\___/\__/\__, /
 echo                                  /____/
 
 pause
+
