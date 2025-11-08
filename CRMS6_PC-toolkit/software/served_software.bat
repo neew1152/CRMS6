@@ -191,43 +191,13 @@ echo     ==+*#**************+++++++
 echo.                                                                                                                                                
 set /p choice="Install MicrosoftPhotos? (Y/N): "
 if /i "%choice%"=="Y" goto InstallMicrosoftPhotos
-if /i "%choice%"=="N" goto PromptWindowsCamera
+if /i "%choice%"=="N" goto PromptDeepFreeze
 goto PromptMicrosoftPhotos
 
 :InstallMicrosoftPhotos
 echo.
 echo [ OK ]
 start "" "%basepath%MicrosoftPhotosInstaller.exe"
-goto PromptWindowsCamera
-
-:PromptWindowsCamera
-echo.                                                                                                                       
-echo             +=======++++                   
-echo  ========  ++++++++++++++                  
-echo ==========++++++++++++++++++++++++++       
-echo ===++++++++++++=-::-=++++++++++++++++      
-echo =+++++++++++-..........-*+++++=--=++*      
-echo ++++++++++=..:=+======:..=*+++++++++*      
-echo +++++++++-..============..-*++++++++*      
-echo +++++++++:.-============-.:+*+++*****      
-echo +++++++++:.==============.:+*********      
-echo +++++++++:.-============-.:**********      
-echo ++++++++*+:.:==========:.:+**********      
-echo ++++++++***:..-======-..:************      
-echo +++++++++****-:......:-**************      
-echo +++++++++****************************      
-echo *****************###*****************      
-echo ####################################              
-echo.                                                                                                                                                
-set /p choice="Install WindowsCamera? (Y/N): "
-if /i "%choice%"=="Y" goto InstallWindowsCamera
-if /i "%choice%"=="N" goto PromptDeepFreeze
-goto PromptWindowsCamera
-
-:InstallWindowsCamera
-echo.
-echo [ OK ]
-start "" "%basepath%WindowsCameraInstaller.exe"
 goto PromptDeepFreeze
 
 :PromptDeepFreeze
@@ -272,5 +242,6 @@ if exist "%payloadps1%" (
 ) else (
     echo Payload PowerShell script not found!
 )
+
 
 
