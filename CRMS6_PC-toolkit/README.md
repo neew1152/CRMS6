@@ -21,13 +21,6 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
   - Windows Defender & Firewall
   - SmartScreen and UAC
   - Spectre/Meltdown mitigations
-  - Password complexity requirements
-- Enables vulnerable services:
-  - Remote Desktop (RDP)
-  - SMBv1 protocol
-  - Guest account
-- Configures weak cryptography settings
-- Enables detailed attack logging
 
 ### Software Module (`/software`)
 - Installs essential development tools:
