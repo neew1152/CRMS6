@@ -28,7 +28,7 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 - Deploys popular browsers:
   - Chrome, Firefox, Tor Browser
 - Installs utilities:
-  - Windows Camera, Microsoft Photos, VLC, 7-Zip, .NET Framework
+  - Windows Camera, Microsoft Photos, 7-Zip, .NET Framework
 - Microsoft Office deployment:
   - Supports 2019, 2021, 2024, and 365
 - Specialized tools:
