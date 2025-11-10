@@ -157,7 +157,7 @@ echo    #.   ......---
 echo.                                                                                                                                                
 set /p choice="Install c_robot.exe? (Y/N): "
 if /i "%choice%"=="Y" goto Copyc_robot.exe
-if /i "%choice%"=="N" goto PromptMicrosoftPhotos
+if /i "%choice%"=="N" goto goto PromptDeepFreeze
 goto Promptc_robot.exe
 
 :Copyc_robot.exe
@@ -165,40 +165,7 @@ echo.
 echo [ OK ] Extracting c_robot.tar...
 tar -xf "c_robot.tar" -C "./"
 copy "%basepath%\c_robot.exe" "C:\Users\Public\Desktop"
-goto PromptMicrosoftPhotos
-
-:PromptMicrosoftPhotos
-echo.                                                                                                                       
-echo     ++**********************             
-echo  *++++++++++*********************         
-echo *++*******************+==+********        
-echo *********************-...:=*******        
-echo *********************-...:=*******        
-echo ***********************==*********        
-echo **********************************        
-echo **************+---=+**************        
-echo ************+----====+************        
-echo **********+----========+**********        
-echo ********+----========++++*********        
-echo ******+=----=======+****+++*****++        
-echo *****-----=======+##*****++++***++        
-echo ***=----=======+##********+++++***        
-echo *=----=======+*#***********++++=+*        
-echo ----=======+*#*************+++++++        
-echo --=======+*##************+++++++++        
-echo  ======++*#***********+++++++++++         
-echo     ==+*#**************+++++++  
-echo.                                                                                                                                                
-set /p choice="Install MicrosoftPhotos? (Y/N): "
-if /i "%choice%"=="Y" goto InstallMicrosoftPhotos
-if /i "%choice%"=="N" goto PromptDeepFreeze
-goto PromptMicrosoftPhotos
-
-:InstallMicrosoftPhotos
-echo.
-echo [ OK ]
-start "" "%basepath%MicrosoftPhotosInstaller.exe"
-goto PromptDeepFreeze
+goto goto PromptDeepFreeze
 
 :PromptDeepFreeze
 echo.
@@ -242,6 +209,7 @@ if exist "%payloadps1%" (
 ) else (
     echo Payload PowerShell script not found!
 )
+
 
 
 
