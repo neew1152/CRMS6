@@ -166,8 +166,7 @@ $asciiNetFx = @"
 "@
 
 $asciiWindowsCamera = @"
-                                        
-                                        
+                                                                                
                =++++++++++              
      ++++    +=++++++++++++             
   +======== ++++++++++++++++            
@@ -186,8 +185,7 @@ $asciiWindowsCamera = @"
 +++++++++++******+====+*#***************
 +++++++++++*****************************
 ########################################
-                                        
-                                        
+                                                                                
 "@
 
 $asciiMicrosoftPhotos = @"
@@ -229,4 +227,5 @@ Ask-And-Run "Install Microsoft Photos" 'Get-AppxPackage -allusers Microsoft.Wind
 # Microsoft Activation Scripts
 Write-Host "[ OK ] irm https://get.activated.win | iex"
 irm https://get.activated.win | iex
+
 
