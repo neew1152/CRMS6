@@ -113,11 +113,11 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Controlled Folder Access]
 "EnableControlledFolderAccess"=dword:00000000
 
-; Disable ASR General
+; Disable Attack Surface Reduction General
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR]
 "ExploitGuard_ASR_Rules"=dword:00000000
 
-; Disable Specific ASR Rules
+; Disable Specific Attack Surface Reduction Rules
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules]
 "75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84"=dword:00000000
 "3B576869-A4EC-4529-8536-B80A7769E899"=dword:00000000
@@ -181,5 +181,6 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
 "AllowTelemetry"=dword:00000000
+
 
 
