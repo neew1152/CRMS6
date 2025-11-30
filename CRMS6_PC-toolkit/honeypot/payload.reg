@@ -162,3 +162,23 @@ Windows Registry Editor Version 5.00
 ; Disable memory protections
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
 "DisableExceptionChainValidation"=dword:00000001
+
+; Disable Control Flow Guard
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
+"DisableCFG"=dword:00000001
+
+; Disable ASLR improvements
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"MoveImages"=dword:00000000
+
+; Disable Application Guard
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\AppHVSI]
+"AllowAppHVSI"=dword:00000000
+
+; Disable Credential Guard
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA]
+"LsaCfgFlags"=dword:00000000
+
+; Disable Device Guard
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard]
+"EnableVirtualizationBasedSecurity"=dword:00000000
