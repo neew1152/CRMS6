@@ -22,7 +22,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features]
 "TamperProtection"=dword:00000000
 
-; Disable Defender Services (Start=4 means Disabled)
+; Disable Defender Services
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
 "Start"=dword:00000004
 
@@ -335,4 +335,5 @@ Windows Registry Editor Version 5.00
 ; Disable SEHOP
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
 "DisableExceptionChainValidation"=dword:00000001
+
 
