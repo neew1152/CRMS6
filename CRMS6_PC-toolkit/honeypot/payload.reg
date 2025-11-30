@@ -120,6 +120,10 @@ Windows Registry Editor Version 5.00
 "ClearPageFileAtShutdown"=dword:00000000
 "PhysicalAddressExtension"=dword:00000000
 
+; Disable DEP system-wide
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"MoveImages"=dword:00000000
+
 ; Disable Driver Signature Enforcement
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CI\Policy]
 "UpgradedSystem"=dword:00000000
@@ -182,3 +186,7 @@ Windows Registry Editor Version 5.00
 ; Disable Device Guard
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard]
 "EnableVirtualizationBasedSecurity"=dword:00000000
+
+; Disable SEHOP
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
+"DisableExceptionChainValidation"=dword:00000001
