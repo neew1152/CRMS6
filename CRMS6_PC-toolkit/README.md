@@ -20,19 +20,19 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 - Disabled/Restricted:
   -   Windows Defender (Anti-Virus, Anti-Spyware, Real-Time Protection, Tamper Protection)
   -   All core Windows Defender services
-  -   Security/Cloud Reporting (SpyNet)
-  -   Security Notifications (UI/Popups)
-  -   Windows Firewall (Standard and Domain Profiles)
+  -   Security/Cloud Reporting
+  -   Security Notifications
+  -   Windows Firewall
   -   Network Protection
-  -   User Account Control (UAC)
+  -   User Account ASR
   -   Windows SmartScreen
   -   Controlled Folder Access
-  -   Attack Surface Reduction (ASR) Rules
+  -   Attack Surface Reduction ASR Rules
   -   Spectre/Meltdown Mitigations
-  -   Control Flow Guard (CFG)
+  -   Control Flow Guard
   -   Driver Signature Enforcement checks
   -   Credential Guard / Device Guard
-  -   Antimalware Scan Interface (AMSI)
+  -   Antimalware Scan Interface
   -   Windows Automatic Updates
   -   Windows Telemetry
 
