@@ -22,7 +22,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features]
 "TamperProtection"=dword:00000000
 
-; Disable Defender Services (Start=4 means Disabled)
+; Disable Defender Services
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
 "Start"=dword:00000004
 
@@ -96,7 +96,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\SmartScreenEnabled]
 @=dword:00000000
 
-; Disable UAC (User Account Control)
+; Disable User Account Control
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "EnableLUA"=dword:00000000
 "ConsentPromptBehaviorAdmin"=dword:00000000
@@ -150,7 +150,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecureBoot]
 "Enabled"=dword:00000000
 
-; Disable AMSI (Antimalware Scan Interface)
+; Disable Antimalware Scan Interface
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AMS]
 "EnableAmsi"=dword:00000000
 
@@ -181,3 +181,4 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
 "AllowTelemetry"=dword:00000000
+
