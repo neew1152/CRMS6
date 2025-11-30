@@ -24,10 +24,10 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
   -   Security Notifications
   -   Windows Firewall
   -   Network Protection
-  -   User Account ASR
+  -   User Account Control
   -   Windows SmartScreen
   -   Controlled Folder Access
-  -   Attack Surface Reduction ASR Rules
+  -   Attack Surface Reduction Rules
   -   Spectre/Meltdown Mitigations
   -   Control Flow Guard
   -   Driver Signature Enforcement checks
