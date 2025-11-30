@@ -1,6 +1,6 @@
 Windows Registry Editor Version 5.00
 
-; Permanently disable Windows Defender Antimalware Service
+; Permanently disable Antimalware Service Executable
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
 "DisableAntiSpyware"=dword:00000001
 "DisableAntiVirus"=dword:00000001
@@ -20,18 +20,6 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter]
 "Start"=dword:00000003
 
-; Disable Smart Screen to make the VM appear less protected
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
-"SmartScreenEnabled"="Off"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
-"EnableSmartScreen"=dword:00000000
-"ShellSmartScreenLevel"="Off"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\SmartScreenEnabled]
-@=dword:00000000
-
-; Disable Windows Defender to attract malware
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Security Center\Feature]
 "DisableNotificationsUI"=dword:00000001
 
@@ -46,6 +34,17 @@ Windows Registry Editor Version 5.00
 "DisableOnAccessProtection"=dword:00000001
 "DisableScanOnRealtimeEnable"=dword:00000001
 "DisableRealtimeMonitoring"=dword:00000001
+
+; Disable Smart Screen to make the VM appear less protected
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"SmartScreenEnabled"="Off"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000
+"ShellSmartScreenLevel"="Off"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\SmartScreenEnabled]
+@=dword:00000000
 
 ; Disable Windows Firewall to allow unsolicited network traffic
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile]
@@ -86,5 +85,6 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
 "MitigationOptions"=dword:00000000
+
 
 
