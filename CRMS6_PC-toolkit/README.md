@@ -17,10 +17,27 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 
 ## Key Features
 ### Honeypot Module (`/honeypot`)
-- Disables critical security protections:
-  - Windows Defender & Firewall
-  - SmartScreen and UAC
-  - Spectre/Meltdown mitigations
+- Disabled/Restricted:
+  -   Windows Defender (Anti-Virus, Anti-Spyware, Real-Time Protection, Tamper Protection)
+  -   All core Windows Defender services
+  -   Security/Cloud Reporting (SpyNet)
+  -   Security Notifications (UI/Popups)
+  -   Windows Firewall (Standard and Domain Profiles)
+  -   Network Protection
+  -   User Account Control (UAC)
+  -   Windows SmartScreen
+  -   Controlled Folder Access
+  -   Attack Surface Reduction (ASR) Rules
+  -   Spectre/Meltdown Mitigations
+  -   Control Flow Guard (CFG)
+  -   Driver Signature Enforcement checks
+  -   Credential Guard / Device Guard
+  -   Antimalware Scan Interface (AMSI)
+  -   Windows Automatic Updates
+  -   Windows Telemetry
+
+- Enabled:
+  -   PowerShell Execution Policy is set to Unrestricted
 
 ### Software Module (`/software`)
 - Installs essential development tools:
