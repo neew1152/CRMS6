@@ -43,14 +43,24 @@ if exist "%payloadreg%" (
     echo.
     echo [ OK ] Installing payload registry file: %payloadreg%
     reg import "%payloadreg%"
-    echo [ OK ] Disable Smart Screen
     echo [ OK ] Disable Windows Defender
+    echo [ OK ] Disable All core Windows Defender services
+    echo [ OK ] Disable Security and Cloud Reporting
+    echo [ OK ] Disable Security Notifications
     echo [ OK ] Disable Windows Firewall
-    echo [ OK ] Disable Windows Update
-    echo [ OK ] Disable User Access Control
-    echo [ OK ] Disable Action Center
-    echo [ OK ] Enable PowerShell Script Execution
-    echo [ OK ] Disable Spectre/Meltdown mitigations
+    echo [ OK ] Disable Network Protection
+    echo [ OK ] Disable User Account Control
+    echo [ OK ] Disable Windows SmartScreen
+    echo [ OK ] Disable Controlled Folder Access
+    echo [ OK ] Disable Attack Surface Reduction Rules
+    echo [ OK ] Disable Spectre and Meltdown Mitigations
+    echo [ OK ] Disable Control Flow Guard
+    echo [ OK ] Disable Driver Signature Enforcement checks
+    echo [ OK ] Disable Credential Guard and Device Guard
+    echo [ OK ] Disable Antimalware Scan Interface
+    echo [ OK ] Disable Windows Automatic Updates
+    echo [ OK ] Disable Windows Telemetry
+    echo [ OK ] Enable PowerShell Execution Policy Unrestricted
 ) else (
     echo Payload registry not found: %payloadreg%
 )
@@ -102,4 +112,5 @@ echo   /_/ /____/\____/\___/_/\___/\__/\__, /
 echo                                  /____/
 
 pause
+
 
