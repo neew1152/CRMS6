@@ -22,7 +22,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features]
 "TamperProtection"=dword:00000000
 
-; Disable Defender Services
+; Disable Defender Services (Start=4 means Disabled)
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinDefend]
 "Start"=dword:00000004
 
@@ -96,7 +96,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\SmartScreenEnabled]
 @=dword:00000000
 
-; Disable User Account User
+; Disable UAC (User Account Control)
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
 "EnableLUA"=dword:00000000
 "ConsentPromptBehaviorAdmin"=dword:00000000
@@ -181,160 +181,3 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
 "AllowTelemetry"=dword:00000000
-; Disable Tamper Protection
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features]
-"TamperProtection"=dword:00000000
-
-; Disable Cloud-based protection
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
-"SpynetReporting"=dword:00000000
-"SubmitSamplesConsent"=dword:00000002
-
-; Disable Sample Submission
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
-"SubmitSamplesConsent"=dword:00000002
-
-; Disable Smart Screen
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
-"SmartScreenEnabled"="Off"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
-"EnableSmartScreen"=dword:00000000
-"ShellSmartScreenLevel"="Off"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Edge\SmartScreenEnabled]
-@=dword:00000000
-
-; Disable Windows Firewall
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\StandardProfile]
-"EnableFirewall"=dword:00000000
-"DisableNotifications"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile]
-"DisableNotifications"=dword:00000001
-
-; Disable Network Protection
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection]
-"EnableNetworkProtection"=dword:00000000
-
-; Disable Controlled Folder Access
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Controlled Folder Access]
-"EnableControlledFolderAccess"=dword:00000000
-
-; Disable Windows Update
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
-"NoAutoUpdate"=dword:00000001
-"AUOptions"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
-"AUOptions"=dword:00000001
-
-; Disable UAC
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
-"EnableLUA"=dword:00000000
-"ConsentPromptBehaviorAdmin"=dword:00000000
-
-; Disable Action Center Security notifications
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance]
-"Enabled"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Security Center\Notifications]
-"DisableNotifications"=dword:00000001
-
-; Enable PowerShell Script Execution
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell]
-"ExecutionPolicy"="Unrestricted"
-
-; Disable Spectre/Meltdown mitigations
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-"FeatureSettingsOverride"=dword:00000003
-"FeatureSettingsOverrideMask"=dword:00000003
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"MitigationOptions"=dword:00000000
-
-; Disable ASR rules
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR]
-"ExploitGuard_ASR_Rules"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules]
-"2619086a- [dword:00000000]
-3b576869-a4ec-4529-8536-b80a7769e899"=dword:00000000
-
-; Disable Data Execution Prevention
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-"ClearPageFileAtShutdown"=dword:00000000
-"PhysicalAddressExtension"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-"MoveImages"=dword:00000000
-
-; Disable Driver Signature Enforcement
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CI\Policy]
-"UpgradedSystem"=dword:00000000
-
-; Disable Secure Boot
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecureBoot]
-"Enabled"=dword:00000000
-
-; Disable Antimalware Scan Interface
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
-"EnableCdp"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AMS]
-"EnableAmsi"=dword:00000000
-
-; Disable Attack Surface Reduction rules individually
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules]
-"75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84"=dword:00000000
-"3B576869-A4EC-4529-8536-B80A7769E899"=dword:00000000
-"D4F940AB-401B-4EFC-AADC-AD5F3C50688A"=dword:00000000
-"5BEB7EFE-FD9A-4556-801D-275E5FFC04CC"=dword:00000000
-"92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B"=dword:00000000
-
-; Disable security center monitoring entirely
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
-"Start"=dword:00000004
-
-; Disable telemetry and data collection
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
-"AllowTelemetry"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
-"AllowTelemetry"=dword:00000000
-
-; Disable behavior monitoring
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection]
-"DisableIOAVProtection"=dword:00000001
-"DisableScriptScanning"=dword:00000001
-
-; Disable memory protections
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"DisableExceptionChainValidation"=dword:00000001
-
-; Disable Control Flow Guard
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"DisableCFG"=dword:00000001
-
-; Disable ASLR improvements
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
-"MoveImages"=dword:00000000
-
-; Disable Application Guard
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\AppHVSI]
-"AllowAppHVSI"=dword:00000000
-
-; Disable Credential Guard
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA]
-"LsaCfgFlags"=dword:00000000
-
-; Disable Device Guard
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard]
-"EnableVirtualizationBasedSecurity"=dword:00000000
-
-; Disable SEHOP
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
-"DisableExceptionChainValidation"=dword:00000001
-
-
-
