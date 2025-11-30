@@ -31,7 +31,7 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
   -   Spectre/Meltdown Mitigations
   -   Control Flow Guard
   -   Driver Signature Enforcement checks
-  -   Credential Guard / Device Guard
+  -   Credential Guard and Device Guard
   -   Antimalware Scan Interface
   -   Windows Automatic Updates
   -   Windows Telemetry
