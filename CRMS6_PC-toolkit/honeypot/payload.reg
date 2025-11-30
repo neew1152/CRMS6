@@ -106,7 +106,7 @@ Windows Registry Editor Version 5.00
 "ExecutionPolicy"="Unrestricted"
 
 ; ============================================================
-; 6. EXPLOIT GUARD & ASR (ATTACK SURFACE REDUCTION)
+; 6. EXPLOIT GUARD & ATTACK SURFACE REDUCTION
 ; ============================================================
 
 ; Disable Controlled Folder Access
@@ -181,4 +181,5 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
 "AllowTelemetry"=dword:00000000
+
 
