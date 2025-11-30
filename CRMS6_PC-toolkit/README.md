@@ -20,7 +20,7 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 - Disabled/Restricted:
   -   Windows Defender
   -   All core Windows Defender services
-  -   Security/Cloud Reporting
+  -   Security and Cloud Reporting
   -   Security Notifications
   -   Windows Firewall
   -   Network Protection
@@ -28,7 +28,7 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
   -   Windows SmartScreen
   -   Controlled Folder Access
   -   Attack Surface Reduction Rules
-  -   Spectre/Meltdown Mitigations
+  -   Spectre and Meltdown Mitigations
   -   Control Flow Guard
   -   Driver Signature Enforcement checks
   -   Credential Guard and Device Guard
@@ -37,7 +37,7 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
   -   Windows Telemetry
 
 - Enabled:
-  -   PowerShell Execution Policy is set to Unrestricted
+  -   PowerShell Execution Policy Unrestricted
 
 ### Software Module (`/software`)
 - Installs essential development tools:
