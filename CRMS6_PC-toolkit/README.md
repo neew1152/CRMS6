@@ -19,7 +19,6 @@ The CRMS6 PC Toolkit is a comprehensive system management tool designed for two 
 ### Honeypot Module (`/honeypot`)
 - Disabled/Restricted:
   -   Windows Defender
-  -   All core Windows Defender services
   -   Security and Cloud Reporting
   -   Security Notifications
   -   Windows Firewall
