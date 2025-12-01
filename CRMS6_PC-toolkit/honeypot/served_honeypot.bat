@@ -44,7 +44,6 @@ if exist "%payloadreg%" (
     echo [ OK ] Installing payload registry file: %payloadreg%
     reg import "%payloadreg%"
     echo [ OK ] Disable Windows Defender
-    echo [ OK ] Disable All core Windows Defender services
     echo [ OK ] Disable Security and Cloud Reporting
     echo [ OK ] Disable Security Notifications
     echo [ OK ] Disable Windows Firewall
@@ -112,5 +111,6 @@ echo   /_/ /____/\____/\___/_/\___/\__/\__, /
 echo                                  /____/
 
 pause
+
 
 
