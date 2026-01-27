@@ -14,7 +14,7 @@
 * `%f` : ทศนิยม 3 หลัก
 ### 📄 โค้ดหลัก
 ```cpp
-#include
+#include <ATX2.h>
 int x = 99; // ของจริงเป็นค่าเซ็นเซอร์
 void setup() {
 XIO(); // Extended Input/Output
@@ -33,7 +33,7 @@ void loop() {
 # 0302 lab02fd.ino
 ### 📄 โค้ดหลัก
 ```cpp
-#include
+#include <ATX2.h>
 void setup() {
 XIO(); // Extended Input/Output
 OK();
@@ -52,7 +52,7 @@ while(1); // หยุดคอย (Infinite loop)
 # 0303 lab03sensor
 ### 📄 Tab: `lab03sensor` (เวอร์ชั่นแรก)
 ```cpp
-#include
+#include <ATX2.h>
 void setup() {
 XIO(); // Extended Input/Output
 OK();
@@ -75,7 +75,7 @@ glcd(5, 2, "A7 = %d ", analog(7));
 ```
 ### 📄 Tab: `lab03sensor` (แก้ไขไฟล์หลักเพื่อเรียกใช้ฟังก์ชัน)
 ```cpp
-#include
+#include <ATX2.h>
 void setup() {
 XIO(); // Extended Input/Output
 OK();
@@ -91,7 +91,7 @@ showA(); // เรียกใช้ฟังก์ชันจากแท็�
 # 0303 lab04function (New File)
 ### 📄 File: `lab04function.ino` (สร้างไฟล์ใหม่)
 ```cpp
-#include
+#include <ATX2.h>
 // ค่าอ้างอิง (Black + White) / 2
 int Ref_LL = 562;
 int Ref_RR = 602;
@@ -169,3 +169,4 @@ R = analog(3); // อัปเดตค่าเซ็นเซอร์
 ao(); delay(200); // หยุดมอเตอร์
 }
 ```
+
