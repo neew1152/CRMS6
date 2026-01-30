@@ -52,7 +52,6 @@ void loop() {
   while (1)
     ;  // หยุดคอย (Infinite loop)
 }
-}
 ```
 ---
 # 0303 lab03sensor
@@ -192,6 +191,7 @@ void R90() {
   delay(200);  // หยุดมอเตอร์
 }
 ```
+
 
 
 
