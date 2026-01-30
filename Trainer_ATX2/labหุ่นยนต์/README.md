@@ -111,7 +111,7 @@ int Ref_R = 602;
 
 // กำหนดตัวแปรเก็บค่าเซ็นเซอร์
 int LL = analog(0);
-int RL = analog(7);
+int RR = analog(7);
 int L = analog(2);
 int R = analog(5);
 
@@ -192,5 +192,6 @@ void R90() {
   delay(200);  // หยุดมอเตอร์
 }
 ```
+
 
 
