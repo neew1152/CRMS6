@@ -3,8 +3,6 @@
 
 <img width="1128" height="634" alt="image" src="https://github.com/user-attachments/assets/33bec98a-526a-455d-bd1c-d0daf16402d5" />
 
-### [Clean Installation Windows 11 PC](https://github.com/neew1152/Clean-Installation-Windows-11-Personal-User)
-
 ---
 
 ## Overview
