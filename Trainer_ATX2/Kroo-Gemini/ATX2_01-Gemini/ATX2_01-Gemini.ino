@@ -24,8 +24,8 @@ void setup() {
   setTextSize(1);
 
   // Slide_Calibration();
-  // Operation();
   // Experiment();
+  // Operation();
 }
 
 void loop() {
