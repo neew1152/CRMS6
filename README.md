@@ -2,6 +2,4 @@
 
 ด.ช.นพกร บุญทรง ม.2.2 เลขที่ 3
 
-Email: std017011@proton.me
-
-LINE: neew1152
+https://neew1152.github.io/portfolio/
