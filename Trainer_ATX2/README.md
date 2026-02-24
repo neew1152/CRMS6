@@ -1,3 +1,3 @@
-'https://inex.co.th/store/manual/ATX2p-Manual-re.pdf'
+[https://inex.co.th/store/manual/ATX2p-Manual-re.pdf]
 
-'https://github.com/INEXdev/ArduinoAVR'
+[https://github.com/INEXdev/ArduinoAVR]
