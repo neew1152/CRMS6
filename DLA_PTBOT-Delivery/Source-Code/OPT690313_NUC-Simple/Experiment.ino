@@ -18,7 +18,7 @@ void Lab_1() {
   SetFront(20, 370, 'L');
   FF(60, 555);
   SetFront_Wall(20, 370, 'L');
-  // pickCan_Test(5, NO_SWITCH_LR, 'Y');
+  pickCan_Test(5, NO_SWITCH_LR, 20, 500);
 
   spinDegree_Enhanced(-90);
   SetBack(20, 270);
