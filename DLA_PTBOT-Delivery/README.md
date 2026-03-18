@@ -1,4 +1,12 @@
 # Setup Windows Environment
+[CP210x_Universal_Windows_Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)
+
+![Show-in-folder.png](Docs/Ref-Img/Show-in-folder.png)
+
+![Extract-to.png](Docs/Ref-Img/Extract-to.png)
+
+![Copy-location.png](Docs/Ref-Img/Copy-location.png)
+
 ![Device-Manager.png](Docs/Ref-Img/Device-Manager.png)
 
 Windows Search > *Device Manager* > Open > Connect the PTBOT's USB Port
@@ -17,7 +25,7 @@ Browse my computer for drivers
 
 Search for driver in this location > *PTBOT\Docs\ [CP210x_Universal_Windows_Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)* > Include subfolders > Next > Close
 
-
+---
 
 # Setup Arduino IDE Environment
 ![Preferences.png](Docs/Ref-Img/Preferences.png)
