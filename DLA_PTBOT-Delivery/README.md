@@ -15,7 +15,7 @@ Browse my computer for drivers
 
 ![Browse-for-drivers-on-your-computer.png](Docs/Ref-Img/Browse-for-drivers-on-your-computer.png)
 
-Search for driver in this location > *PTBOT\Docs\ [CP210x_Universal_Windows_Driver](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers)* > Include subfolders > Next > Close
+Search for driver in this location > *PTBOT\Docs\ [CP210x_Universal_Windows_Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)* > Include subfolders > Next > Close
 
 
 
