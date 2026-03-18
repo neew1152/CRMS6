@@ -1,4 +1,5 @@
-# Setup Windows Environment
+# Setup Windows Environment (Driver) - ตั้งค่าสภาพแวดล้อม Windows (ไดร์เวอร์)
+
 [Download CP210x_Universal_Windows_Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)
 
 ![Show-in-folder.png](Docs/Ref-Img/Show-in-folder.png)
@@ -27,7 +28,7 @@ Search for driver in this location > *PTBOT\Docs\ [CP210x_Universal_Windows_Driv
 
 ---
 
-# Setup Arduino IDE Environment
+# Setup Arduino IDE Environment - ตั้งค่าสภาพแวดล้อม Arduino IDE (Library)
 ![Preferences.png](Docs/Ref-Img/Preferences.png)
 
 File > Preferences
