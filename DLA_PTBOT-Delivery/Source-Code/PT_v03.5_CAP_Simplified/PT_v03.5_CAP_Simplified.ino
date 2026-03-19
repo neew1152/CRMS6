@@ -34,7 +34,7 @@ void setup() {
   xTaskCreatePinnedToCore(switchGripperLoop, "switchGripperLoop", 2048, NULL, 1, &switchGripperTaskHandle, 1);
   vTaskSuspend(sonarTaskHandle);
   vTaskSuspend(switchGripperTaskHandle);
-  Balance_Arm('O');
+  Balance_Arm('C');
   lift(2);
   STOP();
   // ShowValue_Sensor();
