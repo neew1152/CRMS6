@@ -53,8 +53,6 @@ Based on a thorough review of the code, here are the "blind spots" (edge cases, 
 
 I have categorized them by severity.
 
----
-
 ### 🚨 Critical: Can Freeze or Crash the Robot
 
 **1. `pulseIn()` Infinite/Long Blocking Timeout**
@@ -72,8 +70,6 @@ I have categorized them by severity.
 *   **The Code:** `SetFront()` has a `while(1)` loop that only exits if `line_value[0] <= 50 && line_value[1] <= 50`.
 *   **The Blind Spot:** If the robot is slightly off-course and completely misses the line, or if a line sensor breaks, the robot will drive forward forever. There is no timeout or fail-safe.
 *   **The Fix:** Add a timeout exactly like you did in `moveToCan()` (e.g., `if (millis() - timer > max_time) break;`).
-
----
 
 ### ⚠️ High: Movement & Control Flaws
 
@@ -98,8 +94,6 @@ I have categorized them by severity.
 *   **The Code:** Movement routines use absolute Yaw: `error = current_degree - angleRead(YAW);`
 *   **The Blind Spot:** IMUs drift over time. If the robot gets bumped, or the IMU naturally drifts 5 degrees while sitting still, the robot will drive at a permanent skew until `SetFront()` is called to reset `current_degree`.
 *   **The Fix:** If you want a perfectly straight line, you should sample `angleRead(YAW)` at the *exact moment* the `FF()` function is called and use that as the temporary `target_degree`, rather than relying on a global `current_degree` that might be old.
-
----
 
 ### 🛠️ Medium: Hardware & RTOS Quirks
 
