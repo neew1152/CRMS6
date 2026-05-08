@@ -117,19 +117,13 @@ I have categorized them by severity.
 *   **The Fix:** Instead of instantly reversing at `-12`, just `motorStop(1)` (brake) that side, and let the other wheel pivot the robot until it hits the line.
 "
 
----
-
 User: "
 categorized into sections, such as movement, gripping mechanism + arm folding angle, etc.
 "
 
----
-
 gemini-3.1-pro-preview:
 "
 Here is the comprehensive analysis of the code’s blind spots, re-categorized by the robot's physical and functional systems. I have also added several new physical and kinematic blind spots specifically regarding your arm folding angles and gripping mechanism.
-
----
 
 ### 🦾 1. Gripping Mechanism & Arm Folding Angles
 This section covers the servos, grippers, and the sequence of passing cans between arms.
