@@ -116,3 +116,86 @@ I have categorized them by severity.
 *   **The Blind Spot:** If the robot approaches a line at a 45-degree angle, one motor will instantly snap from `speed` (forward) to `-12` (reverse) while the other keeps pushing forward. This violent shift can cause the wheels to slip, throwing off your physical odometry and IMU.
 *   **The Fix:** Instead of instantly reversing at `-12`, just `motorStop(1)` (brake) that side, and let the other wheel pivot the robot until it hits the line.
 "
+
+---
+
+User: "
+categorized into sections, such as movement, gripping mechanism + arm folding angle, etc.
+"
+
+---
+
+gemini-3.1-pro-preview:
+"
+Here is the comprehensive analysis of the code’s blind spots, re-categorized by the robot's physical and functional systems. I have also added several new physical and kinematic blind spots specifically regarding your arm folding angles and gripping mechanism.
+
+---
+
+### 🦾 1. Gripping Mechanism & Arm Folding Angles
+This section covers the servos, grippers, and the sequence of passing cans between arms.
+
+*   **Math Out-of-Bounds on Servo Angles (Collision Risk)**
+    *   **The Code:** In `switchGripperLoop`, you use hardcoded offset math to fold the arms: e.g., `servoWrite(chanal_Swing_Left, Swing_Left - 25);`
+    *   **The Blind Spot:** `Swing_Left` is currently `55`. `55 - 25 = 30` (valid servo angle). However, if you tune your base `Swing_Left` variable to `20` on competition day, `20 - 25 = -5`. Standard servo libraries cannot handle negative degrees and may act erratically, snapping to 0 or 180 and violently smashing the robot.
+    *   **The Fix:** Wrap all servo writes in a `constrain()` function. Example: `servoWrite(chanal_Swing_Left, constrain(Swing_Left - 25, 0, 180));`
+*   **Assuming Perfect Mechanical Handoffs**
+    *   **The Code:** `switchGripperLoop` executes a blind sequence: Open gripper, swing arm +35 degrees, delay 250ms, close gripper.
+    *   **The Blind Spot:** It assumes the can is perfectly gripped every time. If a can slips slightly, or the servos move slower due to low battery, 250ms might not be enough time for the arms to reach the handoff position. The receiving gripper will close on empty air, and the dropping gripper will release the can onto the floor.
+    *   **The Fix:** Base servo movement delays on the distance the servo has to travel, or increase the critical handoff delays to 400ms to guarantee completion.
+*   **Incomplete Character Catching in `placeCan()`**
+    *   **The Code:** You clean up uppercase characters (`if (from_gripper == 'R') from_gripper = 'r';`).
+    *   **The Blind Spot:** If a user accidentally passes a completely invalid character (e.g., `'x'`), the `placeCan()` function continues anyway, drops into the `else` block, and incorrectly triggers a `switchGripper()` routine, completely derailing the robot's logic.
+
+### 🏗️ 2. The Lift Mechanism (DC Motor + Encoder)
+This covers the vertical translation of the arms via `liftLoop()`.
+
+*   **Dead Lift Drop on Timeout**
+    *   **The Code:** If the lift motor stalls for >500ms, `stopped_due_to_timeout = true` and power is set to `motorWrite(3, 0);`.
+    *   **The Blind Spot:** When you cut power to 0, gravity takes over. If the lift is holding a heavy can at maximum height (`lift_target = 900`), timing out will instantly drop the can, potentially shattering the mechanism or knocking over the grid. 
+    *   **The Fix:** Apply a small "holding power" (e.g., `motorWrite(3, 10);`) instead of 0, or add a mechanical brake.
+*   **Catastrophic Integral Windup**
+    *   **The Code:** `integral += error; i_value = Ki * integral;`
+    *   **The Blind Spot:** If the lift catches on a wire, the `error` stays high. The `integral` variable will stack up infinitely. When the jam is finally freed, the massive `integral` value will cause the motor to slam violently past the target height, damaging the physical rails.
+    *   **The Fix:** Cap the integral value. `integral = constrain(integral, -2000, 2000);`
+*   **Sudden Target Switching Jerk**
+    *   **The Code:** `lift(position)` instantly sets `lift_target` to a new absolute value.
+    *   **The Blind Spot:** Moving from target 0 to target 900 instantly creates an enormous PID error, pushing the motor to 100% instantly. This draws a massive current spike from the battery, which can reset the ESP32 (brownout).
+    *   **The Fix:** Limit the acceleration, or constrain the max `motor_speed` to 80 instead of 100.
+
+### 🛞 3. Locomotion & Movement
+This covers driving, turning, and IMU correction (`FF`, `BB`, `spinDegree`, `SetFront`).
+
+*   **Battery Drain equals Distance Loss**
+    *   **The Code:** `FF(speed, timer)` moves the robot forward until `millis()` exceeds the timer.
+    *   **The Blind Spot:** You drive using time. 500ms at full battery (8.4V) might equal 20cm of travel. 500ms at low battery (7.2V) might only equal 15cm. Over a 3-minute competition, your robot will "fall short" of its targets. You have `power_factor = 1.0` declared but never updated.
+    *   **The Fix:** You need to dynamically update `power_factor` by reading the battery voltage on an analog pin, OR transition to using wheel encoders to drive by distance rather than time.
+*   **Violent Snapping during Line Alignment**
+    *   **The Code:** In `SetFront()`: `if (line_value[0] <= 50) motorWrite(1, -12); else motorWrite(1, speed);`
+    *   **The Blind Spot:** If approaching a line at an angle, one wheel will instantly reverse from +speed to -12. This violent physical jolt will cause the tires to slip on the mat, ruining the robot's physical position relative to the grid. 
+    *   **The Fix:** Simply brake the wheel (`motorWrite(1, 0)`) and let the other wheel pivot the robot until it squares up.
+*   **Permanent IMU Drift**
+    *   **The Code:** Movement calculations rely on a global `current_degree`.
+    *   **The Blind Spot:** IMUs drift. If the robot sits still for 10 seconds, `angleRead(YAW)` might drift by 3 degrees. Because you base straight driving on the global `current_degree`, the robot will permanently drive at a 3-degree skew.
+    *   **The Fix:** Sample the current angle *exactly* when `FF()` or `BB()` is called, and use that as the target trajectory.
+
+### 👁️ 4. Sensors & Vision
+This covers the Sonar, I2C Distance/Color sensor, and Line tracking.
+
+*   **Total System Freeze (`pulseIn` and I2C)**
+    *   **The Code:** `pulseIn(ECHO_PIN, HIGH);` in `sonarLoop`, and `Wire.requestFrom(0x29, 2);` in `readCanDistance()`.
+    *   **The Blind Spot:** Both of these default Arduino functions are blocking and lack aggressive timeouts. If a wire vibrates loose, the I2C bus hangs or the sonar never hears an echo, the entire code will permanently freeze, requiring a hard reboot during competition.
+    *   **The Fix:** Add a timeout to pulseIn: `pulseIn(ECHO_PIN, HIGH, 30000);`. Add a timeout to the Wire library: `Wire.setTimeOut(10);` in `setup()`.
+*   **Race Condition in Sonar Enabling**
+    *   **The Code:** `sonar_enable = 1; delay(10); while(readSonar() > distance)...`
+    *   **The Blind Spot:** The `sonarLoop` RTOS task has a `vTaskDelay(10)` at the end of its loop. If you enable it, wait exactly 10ms, and immediately read `last_distance`, the task may not have completed its first actual ping yet. You might be reading an old, stale distance from the previous run.
+    *   **The Fix:** Add a flag `new_sonar_data_ready = false` in the main code, and let the RTOS task set it to `true` after its first successful ping.
+*   **Mixing `Wire` and `SoftI2C` blindly**
+    *   **The Code:** You initialize `SoftWire1` and `SoftWire2`, but `readCanDistance()` uses the default hardware `Wire.write(0x29)`.
+    *   **The Blind Spot:** If your ToF/Color sensors are physically plugged into the `SoftI2C` pins (25/26 or 27/14), `readCanDistance()` is sending signals to the wrong physical pins and will always return `-1.0`.
+
+### 🧠 5. Architecture & RTOS (FreeRTOS limitations)
+*   **Blocking Delays inside RTOS Tasks**
+    *   **The Code:** `switchGripperLoop` uses standard `delay(250);`.
+    *   **The Blind Spot:** While the ESP32 port of Arduino tries to handle `delay()` safely, using it heavily inside pinned FreeRTOS tasks is bad practice. It can trigger the Task Watchdog Timer (TWDT) or prevent context switching, starving other tasks. 
+    *   **The Fix:** Replace `delay(250)` inside `switchGripperLoop` and `sonarLoop` with FreeRTOS native delays: `vTaskDelay(250 / portTICK_PERIOD_MS);`. (Note: You correctly did this at the end of the tasks, but missed the ones in the middle of the sequences).
+"
