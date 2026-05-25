@@ -14,7 +14,6 @@ ESP32Encoder Encoder;
 volatile bool Ultrasonic_Enable = 0;
 volatile float Last_Distance = 0.0;
 volatile int Lift_Target = 0;
-int Lift_Default = 2;
 int IR_Data[] = { 0, 0, 0, 0 };
 int Swing_Current_Degree[] = { 0, 0 };
 float Current_Degree = 0;
@@ -36,6 +35,7 @@ int Open_Left = 110;    // S2 เพิ่ม หุบเข้า
 int Open_Right = 90;    // S3 ลด หุบออก
 int Close_Left = 147;   // S2 เพิ่ม หุบเข้า
 int Close_Right = 127;  // S3 ลด หุบออก
+int Lift_Default = 2;
 
 void setup() {
   Serial.begin(115200);
