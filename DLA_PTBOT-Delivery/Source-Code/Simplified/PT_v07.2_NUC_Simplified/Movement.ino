@@ -271,7 +271,7 @@ void SetBack(int speed, float timer, char select) {
 }
 
 void SpinDegree(int relative_degree) {
-  vTaskDelay(250 / portTICK_PERIOD_MS);
+  vTaskDelay(100 / portTICK_PERIOD_MS);
   unsigned long timer_turn = millis();
   int min_speed = 20;
   int max_speed = 75;
@@ -311,7 +311,7 @@ void SpinDegree(int relative_degree) {
     }
     previous_error = error;
   }
-  vTaskDelay(250 / portTICK_PERIOD_MS);
+  vTaskDelay(100 / portTICK_PERIOD_MS);
 }
 
 void FFUltrasonic(float distance) {
