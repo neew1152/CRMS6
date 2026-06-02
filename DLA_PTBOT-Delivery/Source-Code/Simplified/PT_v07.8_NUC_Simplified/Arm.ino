@@ -206,7 +206,6 @@ void PickCan(int pick_height, char gripper, int BB_speed, int BB_delay) {
   Lift(pick_height + 4);
   vTaskDelay(Default_Delay / portTICK_PERIOD_MS);
   BB(Speed_MID, Time_Withdraw);
-  vTaskDelay(Default_Delay / portTICK_PERIOD_MS);
   StableOBJ();
   BB(BB_speed, BB_delay);
 }
