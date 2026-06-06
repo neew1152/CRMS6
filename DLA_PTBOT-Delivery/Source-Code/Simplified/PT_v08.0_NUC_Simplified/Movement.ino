@@ -216,9 +216,9 @@ void SpinDegree(int relative_degree) {
   vTaskDelay(Delay_LOW / portTICK_PERIOD_MS);
   unsigned long timer_turn = millis();
   int min_speed = 20;
-  int max_speed = 100;
+  int max_speed = 75;
   float kp = 1.25;
-  float kd = 2.0;
+  float kd = 1.0;
   float small_angle_threshold = 30;
   float stop_threshold = 1.0;
   float previous_error = 0;
