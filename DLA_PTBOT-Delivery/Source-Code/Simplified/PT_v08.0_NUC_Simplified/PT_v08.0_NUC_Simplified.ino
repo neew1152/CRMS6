@@ -39,7 +39,7 @@ float ToF_Distance = 35;
 float Ultrasonic_Drop_Distance = 5;
 float Ultrasonic_Pick_Distance = 4;
 
-int Swing_Left = 58;                // S0 เพิ่ม ง้างออก
+int Swing_Left = 60;                // S0 เพิ่ม ง้างออก
 int Swing_Right = 58;               // S1 ลด หุบเข้า
 int Open_Left = 110;                // S2 เพิ่ม หุบเข้า
 int Open_Right = 90;                // S3 ลด หุบออก
