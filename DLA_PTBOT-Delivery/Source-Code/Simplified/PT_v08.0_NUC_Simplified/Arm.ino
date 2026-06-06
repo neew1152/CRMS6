@@ -211,7 +211,7 @@ void PickCan(int pick_height, char gripper, int BB_speed, int BB_delay) {
 }
 
 void DropCan(int drop_height, char gripper, char drop_point, int BB_speed, int BB_delay) {
-  int delay_time = Default_Delay + (drop_height * 50);
+  int delay_time = Default_Delay + (drop_height * 25);
   if (delay_time < 0) delay_time = 0;
   Lift(drop_height + 2);
   vTaskDelay(delay_time / portTICK_PERIOD_MS);
