@@ -39,8 +39,8 @@
 void Operation() {
   Mission_1();
   Mission_2();
-  // Mission_3();
-  // Mission_4();
+  Mission_3();
+  Mission_4();
 }
 
 void Mission_1() {
