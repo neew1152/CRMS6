@@ -14,8 +14,6 @@ That means:
 
 So no matter how clever the software is, without **external reference data**, you **will accumulate error**.
 
----
-
 ### 🛠️ In Summary:
 
 | Goal                    | Can You Do It with Just Code?  | Hardware Needed                     |
@@ -24,7 +22,5 @@ So no matter how clever the software is, without **external reference data**, yo
 | Filter/smooth yaw       | ✅ Yes                         | None                                |
 | Long-term yaw stability | ❌ No                          | Magnetometer                        |
 | Drift elimination       | ❌ No                          | Sensor fusion (code **+** hardware) |
-
----
 
 https://inex.co.th/store/manual/POP32i-Sheet230316-re.pdf
