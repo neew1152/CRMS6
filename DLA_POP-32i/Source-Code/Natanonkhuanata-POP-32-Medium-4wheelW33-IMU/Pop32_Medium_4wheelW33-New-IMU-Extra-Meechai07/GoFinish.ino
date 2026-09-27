@@ -1,0 +1,115 @@
+void GoFinish()
+{
+  TracSpeedTimeBack(Speed,500);
+  TracJC1Back();
+  TurnLeft();
+  BackwardBalance();
+  TracJC1();
+  TurnRight();
+  BackwardBalance();
+  TracSpeedTime(Speed,530);
+  TurnLeft();
+  BackwardBalance();
+  TracJC1();
+  TurnLeft();
+  TracJC1();
+  TurnRight();
+  BackwardBalance();
+  TracJC1();
+  TurnLeft();
+  TracJC1();
+  TurnLeft();
+  BackwardBalance();
+  TracJC1();
+  TurnRight();
+  MotorStop(); 
+}
+void GoFinishAcc()
+{
+  TracSpeedTimeBack(ACCSpeed,300);
+  TracJC1Back();
+  TurnLeft();
+  BackwardBalance();
+  TracACC(ACCSpeed,300);
+  TracJC1();
+  TurnRight();
+  BackwardBalance();
+  TracSpeedTime(ACCSpeed,340);
+  TurnLeft();
+  BackwardBalance();
+  TracACC(ACCSpeed,300);
+  TracJC1();
+  TurnLeft();
+  TracACC(ACCSpeed,200);
+  TracJC1();
+  TurnRight();
+  BackwardBalance();
+  TracACC(ACCSpeed,300);
+  TracJC1();
+  TurnLeft();
+  TracACC(ACCSpeed,200);
+  TracJC1();
+  TurnLeft();
+  BackwardBalance();
+  TracACC(ACCSpeed,750);
+  TurnRight();
+  MotorStop(); 
+}
+void GoFinishNoTune()
+{
+  TracSpeedTimeBack(Speed,500);
+  TracJC1Back();
+  TurnLeft();
+  TracJC1();
+  TurnRight();
+  TracSpeedTime(Speed,450);
+  TurnLeft();
+  TracJC1();
+  TurnLeft();
+  TracJC1();
+  TurnRight();
+  TracJC1();
+  TurnLeft();
+  TracJC1();
+  TurnLeft();
+  TracJC1();
+  TurnRight();
+  MotorStop(); 
+}
+void GoFinishSpeed()
+{
+  CurveRightDegreeBack(100,95,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,90,130,0);
+  CurveRightDegreeBack(100,5,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,0,90,0);
+  CurveLeftDegreeBack(100,85,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,90,140,0);
+  CurveLeftDegreeBack(100,175,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,180,130,0);
+  CurveRightDegreeBack(100,95,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,90,140,0);
+  CurveLeftDegreeBack(100,175,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,180,150,0);
+  CurveLeftDegreeBack(100,265,1);
+  TracDegreeSpeedTimeBack(ACCSpeed,265,580,0);
+  CurveLeftDegreeBack(100,355,1);
+}
+void GoFinishCurveAcc()
+{
+  TracSpeedTime(ACCSpeed,180);
+  CurveRightDegree(100,280,1);
+  TracSpeedTime(ACCSpeed,100);
+  CurveRightDegree(100,190,1);
+  TracSpeedTime(ACCSpeed,130);
+  CurveLeftDegree(100,260,1); 
+  TracSpeedTime(ACCSpeed,130);
+  CurveLeftDegree(100,350,1); 
+  TracSpeedTime(ACCSpeed,150);
+  CurveRightDegree(100,280,1); 
+  TracSpeedTime(ACCSpeed,150);
+  CurveLeftDegree(100,350,1); 
+  TracSpeedTime(ACCSpeed,140);
+  CurveLeftDegree(100,75,1);
+  TracSpeedTime(ACCSpeed,600);
+  CurveRightDegree(100,8,1);
+}

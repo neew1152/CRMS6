@@ -1,0 +1,70 @@
+#include <PTBOTAtomVX.h>  // เรียกใช้งาน Library
+#include <ESP32Encoder.h>
+
+#define NO_SWITCH_LR 0
+#define SWITCH_LR 1
+
+//                    S0   S1   S2   S3   S4   S5
+int sensor_min[] = { 400, 400, 400, 400, 250, 400 };  // ค่าสีดำ
+int sensor_max[] = { 610, 740, 970, 720, 460, 960 };  // ค่าสีขาว
+float power_factor = 1.0;
+
+int line_value[] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+int current_degree = 0;
+float previous_error_forward = 0;
+byte servo_pin[] = { 6, 5, 4, 0, 1, 2, 3 };
+
+long delayALL = 150;
+
+TaskHandle_t sonarTaskHandle = NULL;
+TaskHandle_t switchGripperTaskHandle = NULL;
+// มอเตอร์ ต่อ 1 ซ้าย 2 ขวา
+//เซ็นเซอร์ ซ้ายหน้า = 0 ขวา หน้า 1
+//เซ้็นเซอร์ หลัง ขวา 2-ซ้ายสุด 5
+void setup() {
+  initialize();          // เริ่มต้นการทำงานบอร์ด Atom VX  จะแสดง รูป PT
+  Serial.begin(115200);  // เริ่มต้นใช้งาน Serial
+  xTaskCreatePinnedToCore(liftLoop, "liftLoop", 2048, NULL, 1, NULL, 1);
+  xTaskCreatePinnedToCore(sonarLoop, "sonarLoop", 2048, NULL, 1, &sonarTaskHandle, 1);
+  xTaskCreatePinnedToCore(switchGripperLoop, "switchGripperLoop", 2048, NULL, 1, &switchGripperTaskHandle, 1);
+  vTaskSuspend(sonarTaskHandle);
+  vTaskSuspend(switchGripperTaskHandle);
+  setupDistanceSensor();
+  setupServo();
+  // lift(3);  // ยกแขน 3 จากจุดเดิม *ก่อนเปิดหุ่นต้องกดลงให้สุดก่อน ** สำคัญต้องปรับก่อน
+  ///////////////////////เปิดอ่าค่า เซนเซอร์ ////////////////////////////////
+  // ShowValue_Sensor(); // โชว์ค่าเซ็นเซอร์ตรวจจับเส้น
+  // ShowDistanceSensor(); // โชว์ค่าเซ็นเซอร์วัดระยะทาง
+  //////////////////////////////////////////////////////////
+}
+
+void loop() {
+
+  STOP();  //สั่งหยุด กด SW1 or SW2 เพื่อทำงานต่อ
+  setAngleOffset(); // เช็ตตั้งค่า servo 
+  current_degree = 0;
+  // operation_community();
+  // operation_311();
+  test();
+}
+
+void test()
+{
+  SetBack(20, 250, 'L');
+  motorStop(); delay(50);
+
+  pickCan(5, NO_SWITCH_LR);
+  motorTimeDegree_Enhanced(-30, -60, 25, 'R');
+  motorStop(); delay(50);
+  motorTimeDegree_Enhanced(30, 60, 200);
+  SetFront(20, 410, 'L');
+  motorStop(); delay(50);
+  placeCan1_NoShake(12, 5, 'l', 'l');
+  motorStop(); delay(500);
+
+  motorTimeDegree_Enhanced(-30, -60, 200);
+  SetBack(20, 250, 'L');
+  motorStop(); delay(50);
+  placeCan1_NoShake(6, 5, 'r', 'r');
+  motorStop(); delay(500);
+}

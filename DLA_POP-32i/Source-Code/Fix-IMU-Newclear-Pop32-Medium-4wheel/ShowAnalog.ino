@@ -1,0 +1,112 @@
+void Read5Analog() {
+  L2 = analog(0);
+  L1 = analog(1);
+  C = analog(2);
+  R1 = analog(3);
+  R2 = analog(4);
+}
+void Read4BackAnalog() { 
+  BL2 = analog(5);
+  BL1 = analog(6);
+  BR1 = analog(7);
+  BR2 = analog(8);
+}
+
+void Show7Analog() {
+  oled.clear();
+  oled.textSize(1);
+  oled.text(0,1,"Black");
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  StartTimer();
+  beep(1);
+  sw_ok_unpress();
+  if(ReadTimer()>3000) SetSpeed();
+  else{
+  Read5Analog();
+  RefL2 = L2;
+  RefL1 = L1;
+  RefC = C;
+  RefR1 = R1;
+  RefR2 = R2;
+  oled.text(2,0,"L2=%d",L2);
+  oled.text(3,0,"L1=%d",L1);
+  oled.text(4,0,"C =%d",C);
+  oled.text(5,0,"R1=%d",R1);
+  oled.text(6,0,"R2=%d",R2);
+  oled.text(0,9,"White");
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  beep(2);
+  Read5Analog();
+  oled.text(2,8,"L2=%d",L2);
+  oled.text(3,8,"L1=%d",L1);
+  oled.text(4,8,"C =%d",C);
+  oled.text(5,8,"R1=%d",R1);
+  oled.text(6,8,"R2=%d",R2);
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  beep(3);
+  oled.text(0,14,"Average");
+  RefL2 = (RefL2+L2)/2;
+  RefL1 = (RefL1+L1)/2;
+  RefC = (RefC+C)/2;
+  RefR1 = (RefR1+R1)/2;
+  RefR2 = (RefR2+R2)/2;
+  oled.text(2,17,"%d",RefL2);
+  oled.text(3,17,"%d",RefL1);
+  oled.text(4,17,"%d",RefC);
+  oled.text(5,17,"%d",RefR1);
+  oled.text(6,17,"%d",RefR2);
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  
+  beep(100);
+  oled.clear();
+  oled.text(0,0," Black");
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();  
+  beep(0);
+  Read4BackAnalog();
+  RefBL2 = BL2;
+  RefBL1 = BL1;
+  RefBR1 = BR1;
+  RefBR2 = BR2;
+  oled.text(1,0,"BL2=%d",BL2);
+  oled.text(2,0,"BL1=%d",BL1);
+  oled.text(3,0,"BR1=%d",BR1);
+  oled.text(4,0,"BR2=%d",BR2);
+  oled.text(0,9,"White");
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  beep(1);
+  Read4BackAnalog();
+  oled.text(1,8,"BL2=%d",BL2);
+  oled.text(2,8,"BL1=%d",BL1);
+  oled.text(3,8,"BR1=%d",BR1);
+  oled.text(4,8,"BR2=%d",BR2);
+  oled.text(0,14,"Average");
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  beep(2);
+  oled.text(0,14,"Average");
+  RefBL2 = (RefBL2+BL2)/2;
+  RefBL1 = (RefBL1+BL1)/2;
+  RefBR1 = (RefBR1+BR1)/2;
+  RefBR2 = (RefBR2+BR2)/2;
+  oled.text(1,17,"%d",RefBL2);
+  oled.text(2,17,"%d",RefBL1);
+  oled.text(3,17,"%d",RefBR1);
+  oled.text(4,17,"%d",RefBR2);
+  oled.show();
+  sw_ok_unpress();
+  Wait_sw_ok_press();
+  }
+}
