@@ -1,6 +1,6 @@
 # Setup Windows Environment (Driver) - ตั้งค่าสภาพแวดล้อม Windows (ไดร์เวอร์)
 
-https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip
+https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads
 
 ---
 
